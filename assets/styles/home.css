@@ -103,7 +103,7 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .about-copy p + p { margin-top: 1.2em; }
 .about-photo { width: 100%; height: clamp(380px, 46.53vw, 760px); object-fit: cover; background: #222; }
 .testimonials { display: grid; gap: 16px; padding: var(--gutter); }
-.testimonials h2 { text-align: center; }
+.testimonials h2 { font-size: 16px; text-align: center; }
 .cards { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
 .cards::-webkit-scrollbar { display: none; }
 .card { min-width: 0; flex: 0 0 calc((100% - 24px) / 3); display: grid; gap: 20px; scroll-snap-align: start; background: #fff; border: 1px solid #c7c7c733; border-radius: 12px; padding: 20px; }
@@ -114,7 +114,6 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .client p { margin: 4px 0; }
 .avatar { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 50%; background: #eee; font-size: 14px; font-weight: 500; }
 .avatar-photo { display: block; width: 48px; object-fit: cover; }
-.stars { display: block; color: #986100; font-size: 14px; letter-spacing: .08em; }
 .carousel-controls, .indicators { display: flex; align-items: center; justify-content: center; gap: 16px; }
 .indicators { gap: 4px; }
 .indicators i { height: 4px; width: 12px; border-radius: 20px; background: #c7c7c7; }

@@ -19,8 +19,8 @@
 .portrait-strip > :nth-child(3) img { width: 168%; height: 139.53%; left: -27.15%; top: -23.45%; }
 .service-list { display: grid; gap: 24px; margin: 0; padding: 0; list-style: none; }
 .service-list li { display: grid; grid-template-columns: clamp(36px, 7.36vw, 106px) minmax(0, 1fr); gap: 12px; border-top: 1px solid #c7c7c7; padding-block: 20px; }
-.service-list h3, .service-list li > span { font-size: 24px; font-weight: 500; }
-.service-list p { margin-top: 10px; }
+.service-list h3, .service-list li > span { font-size: 16px; font-weight: 500; }
+.service-list p { max-width: 60ch; margin-top: 10px; }
 @media (max-width: 900px) {
   .about-intro-copy { padding-block: 44px 32px; }
   .about-split { gap: 24px; }
