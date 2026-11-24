@@ -189,6 +189,10 @@ details[open] .toggle::before { content: "−"; }
   .footer-layout { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
+  .footer-links { text-align: left; }
+  .footer-links h2,
+  .footer-links a:not(h2 a),
+  .footer-links span { padding-inline: 0; }
   :root { --gutter: 16px; }
   .site-header { align-items: center; }
   .nav-toggle {
@@ -238,7 +242,6 @@ details[open] .toggle::before { content: "−"; }
   .faq-list { gap: 13.8px; padding: 16px; }
   .faq-list summary { min-height: 44px; }
   .footer-links { grid-template-columns: minmax(0, 2fr) minmax(max-content, 3fr); row-gap: 24px; }
-  .footer-links h2, .footer-links a, .footer-links span { padding-inline: 0; }
   .site-footer { margin-top: 24px; }
   #lightbox { width: calc(100% - 16px); }
   #active-photo { max-height: calc(90svh - 68px); }
