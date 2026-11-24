@@ -6,9 +6,9 @@
   <meta name="description" content="Browse the Realedric photography archive.">
   <title>Archive | Realedric Photography</title>
   <link rel="stylesheet" href="../assets/styles/home.css">
-  <link rel="stylesheet" href="../assets/styles/archive.css">
+  <link rel="stylesheet" href="../assets/styles/archive.css?v=2">
   <script src="../assets/scripts/home.js?v=3" defer></script>
-  <script src="../assets/scripts/archive.js" defer></script>
+  <script src="../assets/scripts/archive.js?v=2" defer></script>
 </head>
 <body class="archive-page">
   <header class="site-header">
@@ -30,8 +30,14 @@
     </nav>
   </header>
   <main class="archive-main" aria-labelledby="archive-heading">
-    <h1 id="archive-heading">Archive</h1>
-    <div class="archive-grid">
+    <div class="archive-heading-row">
+      <h1 id="archive-heading">A Little Nostalgia 📸</h1>
+      <label class="archive-zoom" for="archive-gallery-zoom">
+        Photo size <input id="archive-gallery-zoom" aria-controls="archive-gallery" aria-valuetext="Medium" type="range" min="-1" max="1" step="1" value="0">
+        <span class="archive-gallery-size">Medium</span>
+      </label>
+    </div>
+    <div class="archive-grid" id="archive-gallery">
       <button class="archive-photo" type="button"><img src="../assets/images/_MG_0186.jpg" alt="Archive photograph 1" width="2880" height="3600" loading="lazy" decoding="async"></button>
       <button class="archive-photo" type="button"><img src="../assets/images/_MG_1493.jpg" alt="A couple dancing at their wedding" width="1024" height="1280" loading="lazy" decoding="async"></button>
       <button class="archive-photo" type="button"><img src="../assets/images/_MG_0309.jpg" alt="Archive photograph 3" width="1024" height="1280" loading="lazy" decoding="async"></button>

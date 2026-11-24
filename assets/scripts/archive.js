@@ -48,3 +48,19 @@ archiveViewer.addEventListener("keydown", event => {
   if (event.key === "ArrowRight") showArchivePhoto(archiveIndex + 1);
 });
 updateArchiveZoom();
+
+const galleryZoom = document.querySelector("#archive-gallery-zoom");
+const archiveGallery = document.querySelector("#archive-gallery");
+const gallerySize = document.querySelector(".archive-gallery-size");
+const gallerySizes = ["Small", "Medium", "Large"];
+
+function updateGallerySize() {
+  const size = Number(galleryZoom.value);
+  const label = gallerySizes[size + 1];
+  archiveGallery.style.setProperty("--archive-column-offset", -size);
+  gallerySize.textContent = label;
+  galleryZoom.setAttribute("aria-valuetext", label);
+}
+
+galleryZoom.addEventListener("input", updateGallerySize);
+updateGallerySize();
