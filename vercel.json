@@ -1,3 +1,43 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/pages/about",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/pages/portfolio",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/pages/archive",
+      "destination": "/archive",
+      "permanent": true
+    },
+    {
+      "source": "/pages/contact",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/pages/about"
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/pages/portfolio"
+    },
+    {
+      "source": "/archive",
+      "destination": "/pages/archive"
+    },
+    {
+      "source": "/contact",
+      "destination": "/pages/contact"
+    }
+  ]
 }

@@ -148,7 +148,7 @@ details[open] .toggle::before { content: "−"; }
 .footer-socials svg { display: block; width: 22px; height: 22px; }
 .footer-links {
   display: grid;
-  grid-template-columns: minmax(0, 168fr) minmax(0, 200fr) minmax(0, 168fr);
+  grid-template-columns: minmax(0, 168fr) minmax(max-content, 200fr) minmax(0, 168fr);
   gap: clamp(16px, 4.72vw, 68px);
 }
 .footer-links h2 { margin-bottom: 12px; padding-inline: 12px; font-size: 16px; text-transform: uppercase; }
@@ -162,6 +162,7 @@ details[open] .toggle::before { content: "−"; }
   font-weight: 500;
   overflow-wrap: anywhere;
 }
+.footer-links a[href^="mailto:"] { white-space: nowrap; }
 .footer-links a:hover, .footer-links a:focus-visible { color: #fff; }
 .copyright { border-top: 1px solid #c7c7c766; padding-top: 20px; text-align: center; font-weight: 500; }
 #lightbox { position: fixed; inset: 0; margin: auto; width: min(95vw, 1050px); max-height: 95vh; padding: 56px 12px 12px; border: 0; color: #fff; background: #171717; }
@@ -236,7 +237,7 @@ details[open] .toggle::before { content: "−"; }
   .card { flex-basis: 100%; }
   .faq-list { gap: 13.8px; padding: 16px; }
   .faq-list summary { min-height: 44px; }
-  .footer-links { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); row-gap: 24px; }
+  .footer-links { grid-template-columns: minmax(0, 2fr) minmax(max-content, 3fr); row-gap: 24px; }
   .footer-links h2, .footer-links a, .footer-links span { padding-inline: 0; }
   .site-footer { margin-top: 24px; }
   #lightbox { width: calc(100% - 16px); }
