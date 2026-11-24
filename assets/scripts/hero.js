@@ -40,7 +40,8 @@ function advanceHero() {
 
 pauseButton.addEventListener("click", () => {
   paused = !paused;
-  pauseButton.textContent = paused ? "Play slideshow" : "Pause slideshow";
+  pauseButton.toggleAttribute("data-paused", paused);
+  pauseButton.setAttribute("aria-label", paused ? "Play slideshow" : "Pause slideshow");
   playHero(paused ? holdTime : transitionTime + holdTime);
 });
 

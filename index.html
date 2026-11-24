@@ -7,23 +7,23 @@
   <title>Realedric Photography</title>
   <link rel="stylesheet" href="assets/styles/home.css">
   <script src="assets/scripts/home.js" defer></script>
-  <script src="assets/scripts/hero.js" defer></script>
+  <script src="assets/scripts/hero.js?v=2" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a href="#home" class="brand" aria-label="Realedric home"><img src="assets/images/realedric-logo.svg" alt=""></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
     <nav id="main-navigation" aria-label="Main navigation">
-      <a href="pages/about.html">About</a>
-      <details class="portfolio-menu"><summary>Portfolio <span class="chevron" aria-hidden="true"></span></summary>
+      <a class="nav-button" href="pages/about.html">About</a>
+      <details class="portfolio-menu"><summary class="nav-button">Portfolio <span class="chevron" aria-hidden="true"></span></summary>
         <div class="portfolio-links">
           <a href="pages/portfolio.html#weddings">Weddings</a>
           <a href="pages/portfolio.html#portraits">Portraits</a>
           <a href="pages/portfolio.html#events">Events</a>
         </div>
       </details>
-      <a href="#gallery">Archive</a>
-      <a class="pill" href="#contact">Contact Us <span class="up small" aria-hidden="true"></span></a>
+      <a class="nav-button" href="#gallery">Archive</a>
+      <a class="pill nav-contact" href="#contact"><span>Contact Us</span> <svg class="nav-contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </nav>
   </header>
   <main>
@@ -36,8 +36,10 @@
         <div class="hero-slide hero-slide-5"><img src="assets/images/_MG_0086copy.jpg" alt=""></div>
         <div class="hero-slide hero-slide-6"><img src="assets/images/_MG_0199.jpg" alt=""></div>
       </div>
-      <button class="hero-pause" type="button" hidden>Pause slideshow</button>
-      <h1>Every frame <em>tells</em> a Story.</h1>
+      <div class="hero-content">
+        <h1>Every frame <em>tells</em> a Story.</h1>
+        <button class="hero-pause" type="button" aria-label="Pause slideshow" hidden></button>
+      </div>
     </section>
     <section class="work" id="portfolio" aria-labelledby="work-title">
       <div class="intro">
@@ -107,7 +109,7 @@
       </div>
     </section>
   </main>
-  <footer id="contact">
+  <footer class="site-footer" id="contact">
     <div class="footer-layout">
       <div class="footer-brand"><a href="#home"><img src="assets/images/realedric-logo.svg" alt="Realedric"></a><p>A professional portrait, events and wedding photographer capturing life's precious moments with elegance and creativity.</p></div>
       <div class="footer-links">
