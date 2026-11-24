@@ -1,10 +1,11 @@
+.about-page { background: #fff; }
 .about-page .site-header { position: relative; background: #000; }
 .about-intro-copy { padding: 56px var(--gutter) 40px; }
 .about-intro-copy h1 { margin-bottom: 24px; font-size: 24px; font-weight: 500; }
 .about-intro-copy p, .about-split p { color: var(--muted); }
 .about-portrait { position: relative; overflow: hidden; aspect-ratio: 1440 / 824; background: #dedbd7; }
 .about-portrait img, .portrait-strip img { position: absolute; max-width: none; }
-.about-portrait img { top: -28.89%; left: 0; width: 100%; height: 131.07%; }
+.about-portrait img { inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
 .about-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: var(--gutter); }
 .about-split h2 { font-size: 16px; }
 .about-prose { display: grid; gap: 16px; padding-block: 10px; }
@@ -15,8 +16,8 @@
 .portrait-strip > :nth-child(2) { aspect-ratio: 227 / 315; }
 .portrait-strip > :nth-child(3) { aspect-ratio: 223 / 358; }
 .portrait-strip > :nth-child(1) img { width: 104.73%; height: 127%; left: -1.96%; top: -2.81%; }
-.portrait-strip > :nth-child(2) img { width: 125%; height: 120.11%; left: -12.11%; top: -18.45%; }
-.portrait-strip > :nth-child(3) img { width: 132%; height: 109.63%; left: -21.85%; top: -4.82%; }
+.portrait-strip > :nth-child(2) img { width: 125%; height: 120.11%; left: -12.11%; top: -20.07%; }
+.portrait-strip > :nth-child(3) img { width: 168%; height: 139.53%; left: -27.15%; top: -23.45%; }
 .service-list { display: grid; gap: 24px; margin: 0; padding: 0; list-style: none; }
 .service-list li { display: grid; grid-template-columns: clamp(36px, 7.36vw, 106px) minmax(0, 1fr); gap: 12px; border-top: 1px solid #c7c7c7; padding-block: 20px; }
 .service-list h3, .service-list li > span { font-size: 24px; font-weight: 500; }

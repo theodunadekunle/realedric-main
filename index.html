@@ -9,15 +9,18 @@
   <script src="assets/scripts/home.js" defer></script>
   <script src="assets/scripts/hero.js" defer></script>
 </head>
-<body>
+<body class="home-page">
   <header class="site-header">
     <a href="#home" class="brand" aria-label="Realedric home"><img src="assets/images/realedric-logo.svg" alt=""></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
     <nav id="main-navigation" aria-label="Main navigation">
       <a href="pages/about.html">About</a>
       <details class="portfolio-menu"><summary>Portfolio <span class="chevron" aria-hidden="true"></span></summary>
-        <a href="pages/portfolio.html">Portfolio overview</a>
-        <a href="pages/portfolio.html#gallery">Photo gallery</a>
+        <div class="portfolio-links">
+          <a href="pages/portfolio.html#weddings">Weddings</a>
+          <a href="pages/portfolio.html#portraits">Portraits</a>
+          <a href="pages/portfolio.html#events">Events</a>
+        </div>
       </details>
       <a href="#gallery">Archive</a>
       <a class="pill" href="#contact">Contact Us <span class="up small" aria-hidden="true"></span></a>
@@ -26,12 +29,12 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-slides" aria-hidden="true">
-        <div class="hero-slide hero-slide-1 is-current"><img src="assets/images/Property1Default.png" alt="" fetchpriority="high"></div>
-        <div class="hero-slide hero-slide-2"><img src="assets/images/Property1Variant2.png" alt=""></div>
-        <div class="hero-slide hero-slide-3"><img src="assets/images/Property1Variant3.png" alt=""></div>
-        <div class="hero-slide hero-slide-4"><img src="assets/images/Property1Variant4.png" alt=""></div>
-        <div class="hero-slide hero-slide-5"><img src="assets/images/Property1Variant5.png" alt=""></div>
-        <div class="hero-slide hero-slide-6"><img src="assets/images/Property1Variant6.png" alt=""></div>
+        <div class="hero-slide hero-slide-1 is-current"><img src="assets/images/_MG_0186.jpg" alt="" fetchpriority="high"></div>
+        <div class="hero-slide hero-slide-2"><img src="assets/images/_MG_0292.jpg" alt=""></div>
+        <div class="hero-slide hero-slide-3"><img src="assets/images/_MG_0309.jpg" alt=""></div>
+        <div class="hero-slide hero-slide-4"><img src="assets/images/_MG_1120.jpg" alt=""></div>
+        <div class="hero-slide hero-slide-5"><img src="assets/images/_MG_0086copy.jpg" alt=""></div>
+        <div class="hero-slide hero-slide-6"><img src="assets/images/_MG_0199.jpg" alt=""></div>
       </div>
       <button class="hero-pause" type="button" hidden>Pause slideshow</button>
       <h1>Every frame <em>tells</em> a Story.</h1>
@@ -43,17 +46,17 @@
       </div>
       <div class="gallery" id="gallery">
       <div class="photo-row row-1">
-        <button class="photo Frame14" type="button" aria-label="Enlarge photo: A couple dancing at their wedding"><img src="assets/images/Frame14.png" alt="A couple dancing at their wedding" loading="lazy"></button>
-        <button class="photo Frame17" type="button" aria-label="Enlarge photo: Studio portrait of a woman in white"><img src="assets/images/Frame17.png" alt="Studio portrait of a woman in white" loading="lazy"></button>
+        <button class="photo Frame14" type="button" aria-label="Enlarge photo: A couple dancing at their wedding"><img src="assets/images/_MG_1493.jpg" alt="A couple dancing at their wedding" loading="lazy"></button>
+        <button class="photo Frame17" type="button" aria-label="Enlarge photo: Studio portrait of a woman in white"><img src="assets/images/_MG_0160copy.jpg" alt="Studio portrait of a woman in white" loading="lazy"></button>
       </div>
       <div class="photo-row row-2">
-        <button class="photo Frame51" type="button" aria-label="Enlarge photo: Portrait against a warm orange backdrop"><img src="assets/images/Frame51.png" alt="Portrait against a warm orange backdrop" loading="lazy"></button>
-        <button class="photo Frame50" type="button" aria-label="Enlarge photo: Woman in a gold headwrap and sunglasses"><img src="assets/images/Frame50.png" alt="Woman in a gold headwrap and sunglasses" loading="lazy"></button>
-        <button class="photo Frame52" type="button" aria-label="Enlarge photo: Outdoor portrait with a mirror"><img src="assets/images/Frame52.png" alt="Outdoor portrait with a mirror" loading="lazy"></button>
+        <button class="photo Frame51" type="button" aria-label="Enlarge photo: Seated graduation portrait in red"><img src="assets/images/_MG_1541.jpg" alt="Seated graduation portrait in red" loading="lazy"></button>
+        <button class="photo Frame50" type="button" aria-label="Enlarge photo: Woman in a gold headwrap at a celebration"><img src="assets/images/6283aea9-b383-449c-9c9a-f46984bba6fa.jpeg" alt="Woman in a gold headwrap at a celebration" loading="lazy"></button>
+        <button class="photo Frame52" type="button" aria-label="Enlarge photo: Outdoor portrait with a mirror"><img src="assets/images/_MG_0028copy.jpg" alt="Outdoor portrait with a mirror" loading="lazy"></button>
       </div>
       <div class="photo-row row-3">
-        <button class="photo Frame18" type="button" aria-label="Enlarge photo: Man giving two thumbs up"><img src="assets/images/Frame18.png" alt="Man giving two thumbs up" loading="lazy"></button>
-        <button class="photo Frame15" type="button" aria-label="Enlarge photo: Singer performing with a microphone"><img src="assets/images/Frame15.png" alt="Singer performing with a microphone" loading="lazy"></button>
+        <button class="photo Frame18" type="button" aria-label="Enlarge photo: Man holding a phone and tipping his cap"><img src="assets/images/_MG_1494.jpg" alt="Man holding a phone and tipping his cap" loading="lazy"></button>
+        <button class="photo Frame15" type="button" aria-label="Enlarge photo: Singer performing with a microphone"><img src="assets/images/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt="Singer performing with a microphone" loading="lazy"></button>
       </div>
       </div>
       <button class="pill work-button" type="button" id="view-work">See More Works <span class="up" aria-hidden="true"></span></button>
@@ -65,7 +68,7 @@
         <p>I believe the best <em>photographs</em> aren't just seen. <em>They're felt.</em></p>
         <p>Whether I'm documenting a celebration, creating expressive portraits, or exploring new creative ideas, my approach remains the same: <em>to capture something genuine, meaningful, and timeless.</em></p>
       </div>
-      <img class="about-photo" src="assets/images/Frame16.png" alt="Edric photographing his reflection" loading="lazy">
+      <img class="about-photo" src="assets/images/1201a932-ae16-47a2-929f-8adc3e7e3e3f.jpeg" alt="Edric photographing his reflection" loading="lazy">
     </section>
     <section class="testimonials" aria-labelledby="client-title">
       <h2 id="client-title">Clients who trusted Us</h2>
