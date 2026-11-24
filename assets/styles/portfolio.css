@@ -1,0 +1,12 @@
+.portfolio-page .site-header {
+  position: relative;
+  background: #000;
+}
+
+.portfolio-page .work {
+  padding-top: clamp(32px, 4.72vw, 68px);
+}
+
+.portfolio-page .intro {
+  max-width: 473px;
+}
