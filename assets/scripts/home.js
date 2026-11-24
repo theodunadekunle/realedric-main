@@ -1,7 +1,4 @@
 const menu = document.querySelector(".portfolio-menu");
-menu.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => { menu.open = false; });
-});
 document.addEventListener("click", event => {
   if (!menu.contains(event.target)) menu.open = false;
 });
@@ -27,7 +24,9 @@ navToggle.addEventListener("click", () => {
   setNavigation(navToggle.getAttribute("aria-expanded") === "false");
 });
 nav.addEventListener("click", event => {
-  if (compactNav.matches && event.target.closest("a")) setNavigation(false);
+  if (!event.target.closest("a")) return;
+  if (compactNav.matches) setNavigation(false);
+  else menu.open = false;
 });
 document.addEventListener("click", event => {
   if (!header.contains(event.target)) setNavigation(false);
@@ -93,11 +92,3 @@ document.querySelector(".carousel-controls .next").addEventListener("click", () 
 cards.addEventListener("scroll", updateTestimonials);
 window.addEventListener("resize", updateTestimonials);
 updateTestimonials();
-
-const imageDirectory = new URL("../images/" + (document.body.dataset.imageDirectory || ""), document.currentScript.src);
-for (const [selector, filename] of [[".previous", "ArrowLeft.svg"], [".next", "ArrowRight.svg"], [".toggle", "Plus.svg"]]) {
-  const icon = new Image();
-  icon.onload = () => document.querySelectorAll(selector).forEach(element => element.classList.add("has-asset"));
-  icon.src = new URL(filename, imageDirectory).href;
-}
-
