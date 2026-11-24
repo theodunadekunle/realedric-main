@@ -3,8 +3,8 @@
 .about-intro-copy h1 { margin-bottom: 24px; font-size: 24px; font-weight: 500; }
 .about-intro-copy p, .about-split p { color: var(--muted); }
 .about-portrait { position: relative; overflow: hidden; aspect-ratio: 1440 / 824; background: #dedbd7; }
-.about-portrait img, .portrait-strip img { position: absolute; max-width: none; }
-.about-portrait img { inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center bottom; }
+.about-portrait img, .portrait-strip img { position: absolute; max-width: none; object-fit: cover; }
+.about-portrait img { inset: 0; width: 100%; height: 100%; object-position: center bottom; }
 .about-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: var(--gutter); }
 .about-split h2 { font-size: 16px; }
 .about-prose { display: grid; gap: 16px; padding-block: 10px; }
@@ -30,7 +30,7 @@
   .about-split { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .about-prose { padding-block: 0; }
   .about-portrait { aspect-ratio: 4 / 3; }
-  .about-portrait img { inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 75%; }
+  .about-portrait img { inset: 0; width: 100%; height: 100%; object-position: 50% 75%; }
   .service-list { gap: 12px; }
 }
 
