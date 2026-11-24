@@ -30,9 +30,23 @@ nav .pill { margin-left: 18px; }
 .up.small { background-image: url("../images/ArrowUpRight1.svg"); }
 .chevron { background-image: url("../images/ChevronDown.svg"); }
 .hero { position: relative; isolation: isolate; display: flex; align-items: end; height: clamp(540px, 66.6667vw, 1100px); overflow: hidden; padding: 64px var(--gutter); background: #26211e; color: var(--paper); }
-.hero::before, .hero::after { content: ""; position: absolute; inset: 0; z-index: -1; }
-.hero::before { top: -20.4%; bottom: auto; height: 180%; background: url("../images/Property1Default.png") center / 100% 100% no-repeat; }
-.hero::after { background: linear-gradient(179.25deg, transparent 59.32%, #0009 77.9%); }
+.hero-slides, .hero-slide { position: absolute; inset: 0; }
+.hero-slides { z-index: -1; }
+.hero-slide { overflow: hidden; opacity: 0; }
+.hero-slide.is-previous { opacity: 1; z-index: 1; }
+.hero-slide.is-current { opacity: 1; z-index: 2; transition: opacity 2s ease-in-out; }
+.hero-slide img { position: absolute; left: 0; top: var(--hero-top, -20.4%); width: 100%; height: 180%; }
+.hero-slide-2 { --hero-top: -43.67%; }
+.hero-slide-3 { --hero-top: -37.95%; }
+.hero-slide-4 { --hero-top: -30.6%; }
+.hero-slide-5 img { left: -17%; top: -8.57%; width: 134%; height: 110.62%; }
+.hero-slide-6 img { inset: 0; height: 100%; object-fit: cover; }
+.hero-slide::after { content: ""; position: absolute; inset: 0; background: linear-gradient(179.25deg, transparent 59.321%, #0009 77.896%, #0009 101.02%); }
+.hero-slide-4::after, .hero-slide-5::after, .hero-slide-6::after { background: linear-gradient(179.25deg, transparent 59.321%, #0000004d 74.334%, #0000007a 87.948%, #0009 101.02%); }
+.hero-pause { position: absolute; right: var(--gutter); bottom: 0; min-height: 36px; padding-inline: 12px; border-radius: 24px; background: #000c; color: #fff; font-size: 14px; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide.is-current { transition: none; }
+}
 .hero h1 { max-width: 544px; font: italic 400 clamp(64px, 6.95vw, 110px)/.8 "Instrument Serif", Georgia, serif; letter-spacing: -.02em; }
 em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif; }
 .work { display: grid; gap: 40px; padding: 40px var(--gutter); }
@@ -113,7 +127,7 @@ footer { display: grid; gap: 94px; margin-top: 40px; padding: 52px var(--gutter)
 }
 @media (max-width: 900px) {
   .hero { height: clamp(460px, 78svh, 700px); padding-bottom: 48px; }
-  .hero::before { top: 0; height: 100%; background-size: cover; }
+  .hero-slide img { inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .hero h1 { font-size: clamp(56px, 9vw, 82px); }
   .photo-row { height: auto; grid-auto-rows: clamp(220px, 51vw, 460px); }
   .photo img { inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -161,7 +175,7 @@ footer { display: grid; gap: 94px; margin-top: 40px; padding: 52px var(--gutter)
 }
 @media (max-width: 540px) {
   main { gap: 24px; }
-  .hero { height: clamp(420px, 75svh, 600px); padding-bottom: 36px; }
+  .hero { height: clamp(420px, 75svh, 600px); padding-bottom: 48px; }
   .hero h1 { max-width: 390px; font-size: clamp(46px, 11.5vw, 64px); line-height: .9; }
   .work { gap: 24px; padding-block: 24px; }
   .gallery, .photo-row { gap: 8px; }
