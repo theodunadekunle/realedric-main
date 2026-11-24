@@ -1,5 +1,5 @@
 .archive-main {
-  width: min(100%, 2600px);
+  width: min(100%, 1920px);
   margin-inline: auto;
   padding: clamp(96px, 8vw, 160px) clamp(16px, 5vw, 120px) clamp(32px, 5vw, 96px);
   gap: clamp(20px, 3vw, 56px);
@@ -14,7 +14,8 @@
 }
 
 .archive-main h1 {
-  font: 400 clamp(30px, 4vw, 64px)/1.1 Inter, system-ui, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 .archive-heading-row .archive-zoom { min-height: 44px; }
