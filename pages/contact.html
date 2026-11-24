@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../assets/styles/contact.css?v=5">
   <script src="../assets/scripts/home.js?v=5" defer></script>
   <script src="../assets/scripts/hero.js?v=3" defer></script>
-  <script src="../assets/scripts/contact.js" defer></script>
+  <script src="../assets/scripts/contact.js?v=2" defer></script>
 </head>
 <body class="contact-page">
   <header class="site-header">
@@ -36,6 +36,11 @@
       <h1 id="contact-heading">Tell Me About Your Event ✍️</h1>
       <p id="contact-intro">I'd love to hear about your upcoming event, your vision, and the moments you'd love to capture. Share a few details, and a prefilled email draft will open in your preferred email app, ready for you to send.</p>
       <form class="contact-form" action="mailto:hello.realedric@gmail.com" method="post" enctype="text/plain" aria-describedby="contact-intro">
+        <div hidden>
+          <label>Leave this field blank
+            <input name="company_website" tabindex="-1" autocomplete="off">
+          </label>
+        </div>
         <label>Your name
           <input name="name" autocomplete="name" required maxlength="120">
         </label>
@@ -63,8 +68,8 @@
     <section class="contact-slideshow" aria-label="Featured wedding, portrait, and event photography">
       <div class="hero-slides" aria-hidden="true">
         <div class="hero-slide is-current"><img src="../assets/images/_MG_1493.jpg" alt=""></div>
-        <div class="hero-slide"><img src="../assets/images/_MG_0160copy.jpg" alt=""></div>
-        <div class="hero-slide"><img src="../assets/images/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt=""></div>
+        <div class="hero-slide"><img fetchpriority="low" src="../assets/images/contact-portrait.jpg" alt=""></div>
+        <div class="hero-slide"><img fetchpriority="low" src="../assets/images/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt=""></div>
       </div>
       <button class="hero-pause" type="button" aria-label="Pause slideshow" hidden></button>
     </section>
