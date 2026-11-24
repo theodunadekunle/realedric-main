@@ -11,9 +11,9 @@ a:hover { text-decoration: underline; }
 :focus-visible { outline: 3px solid #b96d00; outline-offset: 3px; }
 img { display: block; }
 main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
-.brand img { width: 118px; height: auto; }
 .site-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; position: absolute; z-index: 1; inset: 0 0 auto; min-height: 72px; padding: 12px var(--gutter); color: #fff; background: #0009; }
-.brand { display: inline-flex; align-items: center; min-height: 44px; font-size: 22px; font-weight: 600; }
+.brand { display: inline-flex; align-items: center; min-width: 0; min-height: 44px; }
+.brand img { width: clamp(96px, 16vw, 118px); max-width: 100%; height: auto; }
 .nav-toggle { display: none; }
 nav { display: flex; align-items: center; gap: 10px; }
 nav > a, .portfolio-menu > summary { padding: 12px; }
@@ -108,7 +108,7 @@ details[open] .toggle::before { content: "−"; }
 .toggle.has-asset::before { content: none; }
 footer { display: grid; gap: 94px; margin-top: 40px; padding: 52px var(--gutter); background: #000; color: #fff; }
 .footer-layout { display: grid; grid-template-columns: minmax(200px, 370px) minmax(0, 672px); gap: clamp(24px, 16.67vw, 240px); }
-.footer-brand img { width: 223px; max-width: 100%; height: auto; aspect-ratio: 223/66.235; }
+.footer-brand img { width: clamp(152px, 26vw, 223px); max-width: 100%; height: auto; }
 .footer-brand p { margin-top: 36px; font-size: 14px; font-weight: 400; }
 .footer-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .footer-links h2 { font-size: 16px; text-transform: uppercase; margin: 0 0 12px; }
