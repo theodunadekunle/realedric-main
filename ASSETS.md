@@ -9,6 +9,37 @@ Figma designs checked on 24 November 2026.
 
 Paths are relative to the `website` folder. The export links expire. If an export link is unavailable, open the corresponding Figma design above and export the original image fill or icon layer. Use the listed filename and capitalization.
 
+## Website file structure
+
+```text
+website/
+├── index.html
+├── ASSETS.md
+├── pages/
+│   ├── about.html
+│   └── portfolio.html
+└── assets/
+    ├── images/
+    │   ├── realedric-logo.svg
+    │   ├── Home, Portfolio and slideshow exports listed below
+    │   └── about/
+    │       └── About exports listed below
+    ├── fonts/
+    │   ├── Inter.woff2
+    │   ├── Inter-OFL.txt
+    │   ├── InstrumentSerif-Italic.woff2
+    │   └── InstrumentSerif-OFL.txt
+    ├── scripts/
+    │   ├── home.js
+    │   └── hero.js
+    └── styles/
+        ├── home.css
+        ├── about.css
+        └── portfolio.css
+```
+
+- [x] `assets/images/realedric-logo.svg` · Shared header and footer logo on all three pages.
+
 ## Home and Portfolio
 
 Home and Portfolio share these files. Use one export per filename.
@@ -30,7 +61,6 @@ Home and Portfolio share these files. Use one export per filename.
 | `assets/images/ArrowUpRight.svg` | CTA arrow | [Export](https://www.figma.com/api/mcp/asset/71fd0de7-9f32-4441-b506-f46a9246a461.svg) | [Export](https://www.figma.com/api/mcp/asset/f9ee515c-bb3e-45db-827b-973c74a99390.svg) |
 | `assets/images/Vector.svg` | Testimonial star | [Export](https://www.figma.com/api/mcp/asset/ba9984f5-bec4-4ecf-b338-45de8955ed30.svg) | [Export](https://www.figma.com/api/mcp/asset/f5083dff-66aa-41fb-b022-19b84522e715.svg) |
 | `assets/images/ArrowLeft.svg` | Previous arrow | [Export](https://www.figma.com/api/mcp/asset/aaef3e3c-f0da-4d4d-af21-85fd4d94ea19.svg) | [Export](https://www.figma.com/api/mcp/asset/4703d39e-f359-47c9-b067-f347fedda7c3.svg) |
-| `assets/images/Frame70.svg` | Footer wordmark | [Export](https://www.figma.com/api/mcp/asset/338afe73-6267-4d7f-bff7-3b916e6272d7.svg) | [Export](https://www.figma.com/api/mcp/asset/0d47f402-7af8-4dc7-922b-ab0565630f20.svg) |
 | `assets/images/ChevronDown.svg` | Portfolio menu chevron | [Export](https://www.figma.com/api/mcp/asset/328a8c05-5c7b-4f96-9e86-52309b51852e.svg) | [Export](https://www.figma.com/api/mcp/asset/157e6efe-d105-4d07-bdc0-cec024088dad.svg) |
 | `assets/images/ArrowUpRight1.svg` | Contact Us arrow | [Export](https://www.figma.com/api/mcp/asset/475ee757-662e-4619-8799-cb4f45db33c8.svg) | [Export](https://www.figma.com/api/mcp/asset/03363fda-c918-4459-9f1f-f6580222d393.svg) |
 
@@ -46,7 +76,6 @@ Home and Portfolio share these files. Use one export per filename.
 | `assets/images/about/Frame35.png` | Testimonial avatar | [Export](https://www.figma.com/api/mcp/asset/6368f1e2-0f3b-42ac-9d30-cf4fc1056929.png) |
 | `assets/images/about/Vector.svg` | Testimonial star | [Export](https://www.figma.com/api/mcp/asset/e68b58a8-6010-4ca3-936e-77d275417454.svg) |
 | `assets/images/about/ArrowLeft.svg` | Previous arrow | [Export](https://www.figma.com/api/mcp/asset/fb9ac1dc-5245-43d7-aca8-42546682b2b3.svg) |
-| `assets/images/about/Frame70.svg` | Footer wordmark | [Export](https://www.figma.com/api/mcp/asset/f4b372ab-e1e2-49ab-bf47-555ad62e3cb3.svg) |
 | `assets/images/about/ChevronDown.svg` | Portfolio menu chevron | [Export](https://www.figma.com/api/mcp/asset/420f2109-9ae7-41ee-8181-333e4ad1ad79.svg) |
 | `assets/images/about/ArrowUpRight.svg` | CTA arrow | [Export](https://www.figma.com/api/mcp/asset/ecca3526-b429-4a5e-97de-f780214419c5.svg) |
 
@@ -66,7 +95,6 @@ Home and Portfolio share these files. Use one export per filename.
 - [x] `assets/fonts/Inter.woff2` · Inter variable webfont
 - [x] `assets/fonts/InstrumentSerif-Italic.woff2` · Instrument Serif Italic webfont
 
-The header uses the clickable Realedric text. The footer uses the SVG wordmarks listed above.
 
 ## Before publishing
 
