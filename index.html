@@ -6,36 +6,37 @@
   <meta name="description" content="Realedric photography. Portraits, weddings, events, and creative photography by Edric.">
   <link rel="icon" type="image/png" sizes="64x64" href="assets/images/favicon.png">
   <title>Realedric</title>
-  <link rel="stylesheet" href="assets/styles/home.css?v=8">
-  <script src="assets/scripts/home.js?v=5" defer></script>
+  <link rel="stylesheet" href="assets/styles/home.css?v=21">
+  <script src="assets/scripts/home.js?v=8" defer></script>
   <script src="assets/scripts/hero.js?v=2" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a href="#home" class="brand" aria-label="Realedric home"><img src="assets/images/realedric-logo.svg" alt=""></a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="nav-icon-menu" d="M3 5h14M3 10h14M3 15h14"/><path class="nav-icon-close" d="m5 5 10 10M15 5 5 15"/></svg>
+      <span class="nav-icon-menu" aria-hidden="true"></span><span class="nav-icon-close" aria-hidden="true"></span>
     </button>
     <nav id="main-navigation" aria-label="Main navigation">
       <a class="nav-button" href="pages/about.html">About</a>
       <details class="portfolio-menu"><summary class="nav-button">Portfolio <span class="chevron" aria-hidden="true"></span></summary>
         <div class="portfolio-links">
-          <a href="pages/portfolio.html#weddings">Weddings</a>
-          <a href="pages/portfolio.html#portraits">Portraits</a>
-          <a href="pages/portfolio.html#events">Events</a>
+          <a href="pages/portfolio.html">Featured Works</a>
+          <a href="pages/weddings.html">Weddings</a>
+          <a href="pages/portraits.html">Portraits</a>
+          <a href="pages/events.html">Events</a>
         </div>
       </details>
       <a class="nav-button" href="pages/archive.html">Archive</a>
-      <a class="pill nav-contact" href="pages/contact.html"><span>Contact Us</span> <svg class="nav-contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="pill nav-contact" href="pages/contact.html"><span>Contact Us</span> <span class="nav-contact-icon" aria-hidden="true"></span></a>
     </nav>
   </header>
   <main>
     <section class="hero" id="home">
       <div class="hero-slides" aria-hidden="true">
-        <div class="hero-slide hero-slide-1 is-current"><img src="assets/images/hero-wedding-desktop.jpg" srcset="assets/images/hero-wedding-mobile.jpg 880w, assets/images/hero-wedding-desktop.jpg 1760w" sizes="(max-width: 700px) max(100vw, 60svh), max(100vw, 150svh)" alt="" fetchpriority="high"></div>
-        <div class="hero-slide hero-slide-2"><img fetchpriority="low" src="assets/images/_MG_0292.jpg" alt=""></div>
+        <div class="hero-slide hero-slide-1 is-current"><img src="assets/images/weddings/hero-wedding-desktop.jpg" srcset="assets/images/weddings/hero-wedding-mobile.jpg 880w, assets/images/weddings/hero-wedding-desktop.jpg 1760w" sizes="(max-width: 700px) max(100vw, 60svh), max(100vw, 150svh)" alt="" fetchpriority="high"></div>
+        <div class="hero-slide hero-slide-2"><img fetchpriority="low" src="assets/images/events/_MG_0292.jpg" alt=""></div>
         <div class="hero-slide hero-slide-3"><img fetchpriority="low" src="assets/images/_MG_0309.jpg" alt=""></div>
-        <div class="hero-slide hero-slide-4"><img fetchpriority="low" src="assets/images/_MG_1120.jpg" alt=""></div>
+        <div class="hero-slide hero-slide-4"><img fetchpriority="low" src="assets/images/events/_MG_1120.jpg" alt=""></div>
         <div class="hero-slide hero-slide-5"><img fetchpriority="low" src="assets/images/_MG_0086copy.jpg" alt=""></div>
         <div class="hero-slide hero-slide-6"><img fetchpriority="low" src="assets/images/_MG_0199.jpg" alt=""></div>
       </div>
@@ -51,17 +52,17 @@
       </div>
       <div class="gallery" id="gallery">
       <div class="photo-row row-1">
-        <button class="photo Frame14" type="button" aria-label="Enlarge photo: A couple dancing at their wedding"><img src="assets/images/_MG_1493.jpg" alt="A couple dancing at their wedding" loading="lazy"></button>
-        <button class="photo Frame17" type="button" aria-label="Enlarge photo: Studio portrait of a woman in white"><img src="assets/images/_MG_0160copy.jpg" alt="Studio portrait of a woman in white" loading="lazy"></button>
+        <a class="photo Frame14" href="pages/weddings.html" aria-label="Open Weddings album: A couple dancing at their wedding"><img src="assets/images/weddings/_MG_1493.jpg" alt="A couple dancing at their wedding" loading="lazy"><span class="photo-category" aria-hidden="true">Weddings</span></a>
+        <a class="photo Frame17" href="pages/portraits.html" aria-label="Open Portraits album: Studio portrait of a woman in white"><img src="assets/images/portraits/_MG_0160copy.jpg" alt="Studio portrait of a woman in white" loading="lazy"><span class="photo-category" aria-hidden="true">Portraits</span></a>
       </div>
       <div class="photo-row row-2">
-        <button class="photo Frame51" type="button" aria-label="Enlarge photo: Seated graduation portrait in red"><img src="assets/images/_MG_1541.jpg" alt="Seated graduation portrait in red" loading="lazy"></button>
-        <button class="photo Frame50" type="button" aria-label="Enlarge photo: Woman in a gold headwrap at a celebration"><img src="assets/images/6283aea9-b383-449c-9c9a-f46984bba6fa.jpeg" alt="Woman in a gold headwrap at a celebration" loading="lazy"></button>
-        <button class="photo Frame52" type="button" aria-label="Enlarge photo: Outdoor portrait with a mirror"><img src="assets/images/_MG_0028copy.jpg" alt="Outdoor portrait with a mirror" loading="lazy"></button>
+        <a class="photo Frame51" href="pages/portraits.html" aria-label="Open Portraits album: Seated graduation portrait in red"><img src="assets/images/portraits/_MG_1541.jpg" alt="Seated graduation portrait in red" loading="lazy"><span class="photo-category" aria-hidden="true">Portraits</span></a>
+        <a class="photo Frame50" href="pages/portraits.html" aria-label="Open Portraits album: Woman in a gold headwrap at a celebration"><img src="assets/images/portraits/6283aea9-b383-449c-9c9a-f46984bba6fa.jpeg" alt="Woman in a gold headwrap at a celebration" loading="lazy"><span class="photo-category" aria-hidden="true">Portraits</span></a>
+        <a class="photo Frame52" href="pages/portraits.html" aria-label="Open Portraits album: Outdoor portrait with a mirror"><img src="assets/images/portraits/_MG_0028copy.jpg" alt="Outdoor portrait with a mirror" loading="lazy"><span class="photo-category" aria-hidden="true">Portraits</span></a>
       </div>
       <div class="photo-row row-3">
-        <button class="photo Frame18" type="button" aria-label="Enlarge photo: Man holding a phone and tipping his cap"><img src="assets/images/_MG_1494.jpg" alt="Man holding a phone and tipping his cap" loading="lazy"></button>
-        <button class="photo Frame15" type="button" aria-label="Enlarge photo: Singer performing with a microphone"><img src="assets/images/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt="Singer performing with a microphone" loading="lazy"></button>
+        <a class="photo Frame18" href="pages/portraits.html" aria-label="Open Portraits album: Man holding a phone and tipping his cap"><img src="assets/images/portraits/_MG_1494.jpg" alt="Man holding a phone and tipping his cap" loading="lazy"><span class="photo-category" aria-hidden="true">Portraits</span></a>
+        <a class="photo Frame15" href="pages/events.html" aria-label="Open Events album: Singer performing with a microphone"><img src="assets/images/events/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt="Singer performing with a microphone" loading="lazy"><span class="photo-category" aria-hidden="true">Events</span></a>
       </div>
       </div>
       <a class="pill work-button" href="pages/portfolio.html">See More Works <span class="up" aria-hidden="true"></span></a>
@@ -73,7 +74,7 @@
         <p>I believe the best <em>photographs</em> aren't just seen. <em>They're felt.</em></p>
         <p>Whether I'm documenting a celebration, creating expressive portraits, or exploring new creative ideas, my approach remains the same: <em>to capture something genuine, meaningful, and timeless.</em></p>
       </div>
-      <img class="about-photo" src="assets/images/1201a932-ae16-47a2-929f-8adc3e7e3e3f.jpeg" alt="Edric photographing his reflection" loading="lazy">
+      <img class="about-photo" src="assets/images/about/1201a932-ae16-47a2-929f-8adc3e7e3e3f.jpeg" alt="Edric photographing his reflection" loading="lazy">
     </section>
     <section class="testimonials" aria-labelledby="client-title">
       <h2 id="client-title">Client Who Trusted Us</h2>
@@ -129,12 +130,6 @@
     </div>
     <p class="copyright">All content Copyright © 2026 Realedric</p>
   </footer>
-  <dialog id="lightbox" aria-label="Photo gallery">
-    <form method="dialog"><button class="circle close" aria-label="Close gallery">×</button></form>
-    <button class="circle previous" type="button" aria-label="Previous photo"></button>
-    <img id="active-photo" alt="">
-    <button class="circle next" type="button" aria-label="Next photo"></button>
-  </dialog>
 </body>
 </html>
 

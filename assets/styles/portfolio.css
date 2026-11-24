@@ -7,10 +7,46 @@
   padding-top: clamp(32px, 4.72vw, 68px);
 }
 
-.portfolio-page .intro {
-  max-width: 473px;
+.featured-works {
+  display: grid;
+  gap: clamp(20px, 3vw, 56px);
+  container-type: inline-size;
 }
 
-.portfolio-page .intro p {
+.featured-works .archive-gallery-controls {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+
+.featured-works h1 {
+  font-size: 24px;
   font-weight: 500;
+}
+
+.featured-works .archive-grid[data-adaptive-gallery] .archive-photo img {
+  position: absolute;
+  width: var(--w, 100%);
+  height: var(--h, 100%);
+  left: var(--x, 0%);
+  top: var(--y, 0%);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .featured-works .archive-grid[data-adaptive-gallery] .archive-photo img { inset: 0; width: 100%; height: 100%; }
+}
+
+#archive-category {
+  width: 148px;
+  font-size: 14px;
+}
+
+@supports (appearance: base-select) {
+  #archive-category::picker(select) {
+    font-size: 14px;
+  }
+
+  #archive-category option + option {
+    margin-block-start: 4px;
+  }
 }

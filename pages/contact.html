@@ -6,9 +6,9 @@
   <meta name="description" content="Contact Realedric to inquire about wedding, portrait, and event photography.">
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
   <title>Contact</title>
-  <link rel="stylesheet" href="../assets/styles/home.css?v=8">
-  <link rel="stylesheet" href="../assets/styles/contact.css?v=5">
-  <script src="../assets/scripts/home.js?v=5" defer></script>
+  <link rel="stylesheet" href="../assets/styles/home.css?v=21">
+  <link rel="stylesheet" href="../assets/styles/contact.css?v=8">
+  <script src="../assets/scripts/home.js?v=8" defer></script>
   <script src="../assets/scripts/hero.js?v=3" defer></script>
   <script src="../assets/scripts/contact.js?v=2" defer></script>
 </head>
@@ -16,19 +16,20 @@
   <header class="site-header">
     <a href="../index.html#home" class="brand" aria-label="Realedric home"><img src="../assets/images/realedric-logo.svg" alt=""></a>
     <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="nav-icon-menu" d="M3 5h14M3 10h14M3 15h14"/><path class="nav-icon-close" d="m5 5 10 10M15 5 5 15"/></svg>
+      <span class="nav-icon-menu" aria-hidden="true"></span><span class="nav-icon-close" aria-hidden="true"></span>
     </button>
     <nav id="main-navigation" aria-label="Main navigation">
       <a class="nav-button" href="about.html">About</a>
       <details class="portfolio-menu"><summary class="nav-button">Portfolio <span class="chevron" aria-hidden="true"></span></summary>
         <div class="portfolio-links">
-          <a href="portfolio.html#weddings">Weddings</a>
-          <a href="portfolio.html#portraits">Portraits</a>
-          <a href="portfolio.html#events">Events</a>
+          <a href="portfolio.html">Featured Works</a>
+          <a href="weddings.html">Weddings</a>
+          <a href="portraits.html">Portraits</a>
+          <a href="events.html">Events</a>
         </div>
       </details>
       <a class="nav-button" href="archive.html">Archive</a>
-      <a class="pill nav-contact" href="contact.html" aria-current="page"><span>Contact Us</span> <svg class="nav-contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="pill nav-contact" href="contact.html" aria-current="page"><span>Contact Us</span> <span class="nav-contact-icon" aria-hidden="true"></span></a>
     </nav>
   </header>
   <main class="contact-main">
@@ -48,7 +49,7 @@
           <input name="email" type="email" autocomplete="email" required maxlength="254">
         </label>
         <label class="contact-wide">What are we working on?
-          <select name="service" required>
+          <select class="site-select" name="service" required>
             <option value="">Select a photography service</option>
             <option>Weddings</option>
             <option>Portraits</option>
@@ -62,14 +63,14 @@
         <label class="contact-wide">Tell me about your project
           <textarea name="project" rows="6" placeholder="Share the location, occasion, and what you’d like captured." required></textarea>
         </label>
-        <button class="pill contact-submit contact-wide" type="submit"><span>Open email draft</span> <svg class="nav-contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button class="pill contact-submit contact-wide" type="submit"><span>Open email draft</span> <span class="nav-contact-icon" aria-hidden="true"></span></button>
       </form>
     </section>
     <section class="contact-slideshow" aria-label="Featured wedding, portrait, and event photography">
       <div class="hero-slides" aria-hidden="true">
-        <div class="hero-slide is-current"><img src="../assets/images/_MG_1493.jpg" alt=""></div>
+        <div class="hero-slide is-current"><img src="../assets/images/weddings/_MG_1493.jpg" alt=""></div>
         <div class="hero-slide"><img fetchpriority="low" src="../assets/images/contact-portrait.jpg" alt=""></div>
-        <div class="hero-slide"><img fetchpriority="low" src="../assets/images/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt=""></div>
+        <div class="hero-slide"><img fetchpriority="low" src="../assets/images/events/84c7fb7b-7039-4310-b5d4-9ef598276eff.jpeg" alt=""></div>
       </div>
       <button class="hero-pause" type="button" aria-label="Pause slideshow" hidden></button>
     </section>

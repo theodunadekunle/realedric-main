@@ -20,6 +20,31 @@
       "source": "/pages/contact",
       "destination": "/contact",
       "permanent": true
+    },
+    {
+      "source": "/pages/weddings",
+      "destination": "/weddings",
+      "permanent": true
+    },
+    {
+      "source": "/pages/portraits",
+      "destination": "/portraits",
+      "permanent": true
+    },
+    {
+      "source": "/pages/events",
+      "destination": "/events",
+      "permanent": true
+    },
+    {
+      "source": "/pages/featured-works",
+      "destination": "/portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/featured-works",
+      "destination": "/portfolio",
+      "permanent": true
     }
   ],
   "rewrites": [
@@ -38,6 +63,18 @@
     {
       "source": "/contact",
       "destination": "/pages/contact"
+    },
+    {
+      "source": "/weddings",
+      "destination": "/pages/weddings"
+    },
+    {
+      "source": "/portraits",
+      "destination": "/pages/portraits"
+    },
+    {
+      "source": "/events",
+      "destination": "/pages/events"
     }
   ]
 }

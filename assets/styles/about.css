@@ -5,7 +5,6 @@
 .about-portrait { position: relative; overflow: hidden; aspect-ratio: 1440 / 824; background: #dedbd7; }
 .about-portrait img, .portrait-strip img { position: absolute; max-width: none; object-fit: cover; }
 .about-portrait img { inset: 0; width: 100%; height: 100%; object-position: center bottom; }
-.about-split { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: var(--gutter); }
 .about-split h2 { font-size: 16px; }
 .about-prose { display: grid; gap: 16px; padding-block: 10px; }
 .off-hours { align-items: center; }
@@ -23,11 +22,9 @@
 .service-list p { max-width: 60ch; margin-top: 10px; }
 @media (max-width: 900px) {
   .about-intro-copy { padding-block: 44px 32px; }
-  .about-split { gap: 24px; }
   .portrait-strip { gap: 8px; }
 }
 @media (max-width: 700px) {
-  .about-split { grid-template-columns: minmax(0, 1fr); gap: 16px; }
   .about-prose { padding-block: 0; }
   .about-portrait { aspect-ratio: 4 / 3; }
   .about-portrait img { inset: 0; width: 100%; height: 100%; object-position: 50% 75%; }

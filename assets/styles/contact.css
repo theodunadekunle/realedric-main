@@ -6,14 +6,7 @@
 .contact-main {
   width: min(100%, 1360px);
   margin-inline: auto;
-  padding: clamp(112px, 8.15vw, 138px) clamp(20px, 4.6vw, 78px) clamp(48px, 7vw, 96px);
-}
-
-@media (min-width: 820px) {
-  .contact-main {
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-    gap: clamp(24px, 4vw, 64px);
-  }
+  padding-block-start: calc(72px + var(--gutter));
 }
 
 .contact-slideshow {
@@ -81,7 +74,14 @@
   font: 400 1rem/1.4 Inter, system-ui, sans-serif;
 }
 
-.contact-form select { padding-inline-end: 28px; }
+.contact-form .site-select {
+  --select-surface: #262626;
+  --select-border: #666;
+  --select-text: #f5f5f5;
+  --select-accent: #444;
+  border-radius: 8px;
+  padding-inline: 14px;
+}
 .contact-form textarea { min-height: 160px; resize: vertical; }
 .contact-form ::placeholder { color: #aaa; opacity: 1; }
 
@@ -89,7 +89,6 @@
   min-height: 52px;
   padding: 14px 24px;
   border-radius: 999px;
-  font-size: 1rem;
 }
 
 .contact-form :focus-visible { outline-color: var(--gold); }
