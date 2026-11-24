@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Realedric to inquire about wedding, portrait, and event photography.">
+  <title>Contact | Realedric Photography</title>
+  <link rel="stylesheet" href="../assets/styles/home.css">
+  <link rel="stylesheet" href="../assets/styles/contact.css">
+  <script src="../assets/scripts/home.js?v=3" defer></script>
+  <script src="../assets/scripts/contact.js" defer></script>
+</head>
+<body class="contact-page">
+  <header class="site-header">
+    <a href="../index.html#home" class="brand" aria-label="Realedric home"><img src="../assets/images/realedric-logo.svg" alt=""></a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path class="nav-icon-menu" d="M3 5h14M3 10h14M3 15h14"/><path class="nav-icon-close" d="m5 5 10 10M15 5 5 15"/></svg>
+    </button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a class="nav-button" href="about.html">About</a>
+      <details class="portfolio-menu"><summary class="nav-button">Portfolio <span class="chevron" aria-hidden="true"></span></summary>
+        <div class="portfolio-links">
+          <a href="portfolio.html#weddings">Weddings</a>
+          <a href="portfolio.html#portraits">Portraits</a>
+          <a href="portfolio.html#events">Events</a>
+        </div>
+      </details>
+      <a class="nav-button" href="archive.html">Archive</a>
+      <a class="pill nav-contact" href="contact.html" aria-current="page"><span>Contact Us</span> <svg class="nav-contact-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false"><path d="M4 12 12 4M6 4h6v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </nav>
+  </header>
+  <main class="contact-main">
+    <section aria-labelledby="contact-heading">
+      <h1 id="contact-heading">Quick Start</h1>
+      <p id="contact-intro">Share what you have in mind and open a prefilled draft in your email app.</p>
+      <form class="contact-form" action="mailto:realedric@gmail.com" method="post" enctype="text/plain" aria-describedby="contact-intro">
+        <label>Your name
+          <input name="name" autocomplete="name" required maxlength="120">
+        </label>
+        <label>Email address
+          <input name="email" type="email" autocomplete="email" required maxlength="254">
+        </label>
+        <label class="contact-wide">What are we working on?
+          <select name="service" required>
+            <option value="">Select a photography service</option>
+            <option>Weddings</option>
+            <option>Portraits</option>
+            <option>Events</option>
+            <option>Other photography</option>
+          </select>
+        </label>
+        <label class="contact-wide">Expected timeline
+          <input name="timeline" placeholder="e.g. October 2027 or in 3–4 weeks" maxlength="120">
+        </label>
+        <label class="contact-wide">Tell me about your project
+          <textarea name="project" rows="6" placeholder="Share the location, occasion, and what you’d like captured." required></textarea>
+        </label>
+        <button class="contact-submit contact-wide" type="submit">Open email draft</button>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="footer-layout">
+      <div class="footer-brand"><a href="../index.html#home"><img src="../assets/images/realedric-logo.svg" alt="Realedric"></a><p>A professional portrait, events and wedding photographer capturing life's precious moments with elegance and creativity.</p></div>
+      <div class="footer-links">
+        <div><h2>Explore</h2><a href="about.html">About</a><a href="portfolio.html">Portfolio</a><a href="contact.html" aria-current="page">Contact</a></div>
+        <div><h2>Contact</h2><a href="tel:+2348130868958">+234 (0) 813 086 8958</a><a href="mailto:realedric@gmail.com">realedric@gmail.com</a><span>Available Worldwide ✈️</span></div>
+        <div><h2>Legal</h2><span>Privacy Policy</span><span>Term of Use</span><span>Refund Policy</span></div>
+      </div>
+    </div>
+    <p class="copyright">All content Copyright © 2026 Realedric</p>
+  </footer>
+</body>
+</html>

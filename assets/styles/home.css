@@ -202,6 +202,8 @@ details[open] .toggle::before { content: "−"; }
     padding: 8px var(--gutter) 16px;
     background: #171717;
   }
+  .nav-icon-close, .nav-toggle[aria-expanded="true"] .nav-icon-menu { display: none; }
+  .nav-toggle[aria-expanded="true"] .nav-icon-close { display: inline; }
   .nav-toggle[aria-expanded="true"] + #main-navigation { display: grid; }
   .nav-button { width: 100%; padding-inline: 4px; font-size: clamp(14px, 4vw, 16px); }
   .portfolio-menu[open] .portfolio-links { display: grid; grid-template-columns: 1fr; }

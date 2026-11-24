@@ -1,0 +1,109 @@
+.archive-main {
+  width: min(100%, 2600px);
+  margin-inline: auto;
+  padding: clamp(96px, 8vw, 160px) clamp(16px, 5vw, 120px) clamp(32px, 5vw, 96px);
+  gap: clamp(20px, 3vw, 56px);
+}
+
+.archive-main h1 {
+  font: 400 clamp(32px, 4vw, 64px)/1.1 Georgia, serif;
+}
+
+.archive-grid {
+  --archive-gap: clamp(12px, 3.5vw, 100px);
+  columns: 2;
+  column-gap: var(--archive-gap);
+}
+
+.archive-photo {
+  display: block;
+  width: 100%;
+  margin: 0 0 var(--archive-gap);
+  padding: 0;
+  break-inside: avoid;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.archive-photo img { width: 100%; height: auto; }
+
+@media (min-width: 650px) {
+  .archive-grid { columns: 3; }
+}
+
+@media (min-width: 1000px) {
+  .archive-grid { columns: 4; }
+}
+
+@media (min-width: 1350px) {
+  .archive-grid { columns: 5; }
+}
+
+.archive-viewer {
+  width: min(96vw, 1500px);
+  height: 94dvh;
+  max-width: none;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  background: #171717;
+  color: #fff;
+}
+
+.archive-viewer[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.archive-viewer::backdrop { background: rgb(0 0 0 / 80%); }
+body:has(.archive-viewer[open]) { overflow: hidden; }
+
+.archive-stage {
+  display: flex;
+  overflow: auto;
+  container-type: size;
+  background: #0e0e0e;
+}
+
+.archive-stage img {
+  flex: none;
+  margin: auto;
+  width: calc(min(100cqw, 100cqh * var(--archive-ratio, 1)) * var(--archive-scale, 1));
+  height: auto;
+}
+
+.archive-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 8px clamp(8px, 2vw, 24px);
+}
+
+.archive-control {
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 24px;
+  background: #333;
+  color: #fff;
+}
+
+.archive-control:hover { background: #4a4a4a; }
+.archive-viewer :focus-visible { outline-color: var(--gold); outline-offset: -3px; }
+
+.archive-zoom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-size: 14px;
+}
+
+.archive-zoom input { width: clamp(50px, 20vw, 260px); margin: 0; accent-color: var(--gold); }
+.archive-zoom-value { min-width: 4ch; font-variant-numeric: tabular-nums; }
+
+@media (max-width: 540px) {
+  .archive-viewer-bottom { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .archive-zoom { grid-column: 1 / -1; grid-row: 1; justify-content: center; min-height: 44px; }
+  .archive-zoom input { width: min(58vw, 260px); }
+}

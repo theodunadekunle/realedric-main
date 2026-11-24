@@ -72,34 +72,36 @@ if (document.querySelector("#lightbox")) {
   });
 }
 
-const cards = document.querySelector(".cards");
-const controls = document.querySelector(".carousel-controls");
-const indicators = controls.querySelector(".indicators");
-function testimonialStep() {
-  return cards.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(cards).columnGap);
-}
-function updateTestimonials() {
-  const max = cards.scrollWidth - cards.clientWidth;
-  const step = testimonialStep();
-  const count = max > 1 ? 1 + Math.ceil((max - 1) / step) : 0;
-  controls.hidden = count === 0;
-  if (indicators.childElementCount !== count) {
-    indicators.replaceChildren(...Array.from({ length: count }, () => document.createElement("i")));
+if (document.querySelector(".testimonials")) {
+  const cards = document.querySelector(".cards");
+  const controls = document.querySelector(".carousel-controls");
+  const indicators = controls.querySelector(".indicators");
+  function testimonialStep() {
+    return cards.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(cards).columnGap);
   }
-  const position = cards.scrollLeft;
-  const last = count - 1;
-  const lastMidpoint = ((last - 1) * step + max) / 2;
-  const active = count > 1 && position >= lastMidpoint ? last : Math.round(position / step);
-  Array.from(indicators.children).forEach((dot, index) => dot.classList.toggle("active", index === active));
+  function updateTestimonials() {
+    const max = cards.scrollWidth - cards.clientWidth;
+    const step = testimonialStep();
+    const count = max > 1 ? 1 + Math.ceil((max - 1) / step) : 0;
+    controls.hidden = count === 0;
+    if (indicators.childElementCount !== count) {
+      indicators.replaceChildren(...Array.from({ length: count }, () => document.createElement("i")));
+    }
+    const position = cards.scrollLeft;
+    const last = count - 1;
+    const lastMidpoint = ((last - 1) * step + max) / 2;
+    const active = count > 1 && position >= lastMidpoint ? last : Math.round(position / step);
+    Array.from(indicators.children).forEach((dot, index) => dot.classList.toggle("active", index === active));
+  }
+  function moveTestimonials(direction) {
+    cards.scrollBy({
+      left: direction * testimonialStep(),
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+    });
+  }
+  document.querySelector(".carousel-controls .previous").addEventListener("click", () => moveTestimonials(-1));
+  document.querySelector(".carousel-controls .next").addEventListener("click", () => moveTestimonials(1));
+  cards.addEventListener("scroll", updateTestimonials);
+  window.addEventListener("resize", updateTestimonials);
+  updateTestimonials();
 }
-function moveTestimonials(direction) {
-  cards.scrollBy({
-    left: direction * testimonialStep(),
-    behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
-  });
-}
-document.querySelector(".carousel-controls .previous").addEventListener("click", () => moveTestimonials(-1));
-document.querySelector(".carousel-controls .next").addEventListener("click", () => moveTestimonials(1));
-cards.addEventListener("scroll", updateTestimonials);
-window.addEventListener("resize", updateTestimonials);
-updateTestimonials();
