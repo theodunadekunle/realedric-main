@@ -6,10 +6,10 @@
   <meta name="description" content="Browse the Realedric photography archive.">
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
   <title>Archive</title>
-  <link rel="stylesheet" href="../assets/styles/home.css?v=21">
-  <link rel="stylesheet" href="../assets/styles/archive.css?v=20">
+  <link rel="stylesheet" href="../assets/styles/home.css?v=25">
+  <link rel="stylesheet" href="../assets/styles/archive.css?v=23">
   <script src="../assets/scripts/home.js?v=8" defer></script>
-  <script src="../assets/scripts/archive.js?v=16" defer></script>
+  <script src="../assets/scripts/archive.js?v=17" defer></script>
 </head>
 <body class="archive-page">
   <header class="site-header">
@@ -64,6 +64,7 @@
   </main>
   <dialog class="archive-viewer" aria-label="Archive photo viewer">
     <div class="archive-toolbar">
+      <a class="archive-control gallery-preview-download" download aria-label="Download photo" title="Download photo"></a>
       <p class="archive-count"></p>
       <form method="dialog"><button class="archive-control" autofocus>Close</button></form>
     </div>
@@ -71,12 +72,12 @@
       <img alt="">
     </div>
     <div class="archive-toolbar archive-viewer-bottom">
-      <button class="archive-control archive-previous" type="button">Previous</button>
+      <button class="archive-control archive-previous" type="button" aria-label="Previous photo"></button>
       <label class="archive-zoom" for="archive-zoom">
         Zoom <input id="archive-zoom" type="range" min="100" max="300" value="100" step="5">
         <span class="archive-zoom-value">100%</span>
       </label>
-      <button class="archive-control archive-next" type="button">Next</button>
+      <button class="archive-control archive-next" type="button" aria-label="Next photo"></button>
     </div>
   </dialog>
   <footer class="site-footer" id="contact">

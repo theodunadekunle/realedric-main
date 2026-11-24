@@ -5,7 +5,7 @@ if (archiveViewer) {
   const archiveStage = archiveViewer.querySelector(".archive-stage");
   const archiveImage = archiveStage.querySelector("img");
   const archiveCount = archiveViewer.querySelector(".archive-count");
-  const albumTag = archiveViewer.querySelector(".photo-album-tag");
+  const downloadLink = archiveViewer.querySelector(".gallery-preview-download");
   const thumbnails = archiveViewer.querySelector(".gallery-preview-thumbnails");
   const archiveZoom = document.querySelector("#archive-zoom");
   const archiveZoomValue = archiveViewer.querySelector(".archive-zoom-value");
@@ -25,11 +25,7 @@ if (archiveViewer) {
     archiveImage.alt = photo.alt;
     archiveImage.src = photo.src;
     if (archiveCount) archiveCount.textContent = `${archiveIndex + 1} / ${archivePhotos.length}`;
-    if (albumTag) {
-      const category = photo.closest(".archive-photo").dataset.category ?? archiveViewer.dataset.category;
-      albumTag.href = `${category}.html`;
-      albumTag.textContent = category[0].toUpperCase() + category.slice(1);
-    }
+    downloadLink.href = photo.src;
     if (thumbnails) {
       thumbnails.querySelector("[aria-current]")?.removeAttribute("aria-current");
       const current = thumbnails.children[archiveIndex];

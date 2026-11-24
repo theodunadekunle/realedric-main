@@ -6,10 +6,10 @@
   <meta name="description" content="Browse the Realedric portraits photo album.">
   <link rel="icon" type="image/png" sizes="64x64" href="../assets/images/favicon.png">
   <title>Portraits</title>
-  <link rel="stylesheet" href="../assets/styles/home.css?v=21">
-  <link rel="stylesheet" href="../assets/styles/archive.css?v=20">
+  <link rel="stylesheet" href="../assets/styles/home.css?v=25">
+  <link rel="stylesheet" href="../assets/styles/archive.css?v=23">
   <script src="../assets/scripts/home.js?v=8" defer></script>
-  <script src="../assets/scripts/archive.js?v=16" defer></script>
+  <script src="../assets/scripts/archive.js?v=17" defer></script>
 </head>
 <body class="archive-page">
   <header class="site-header">
@@ -53,9 +53,9 @@
       <button class="archive-photo" type="button"><img src="../assets/images/portraits/_MG_1494.jpg" alt="Man holding a phone and tipping his cap" width="2048" height="2560" loading="lazy" decoding="async"></button>
     </div>
   </main>
-  <dialog class="archive-viewer" data-category="portraits" aria-label="Portraits photo viewer">
+  <dialog class="archive-viewer" aria-label="Portraits photo viewer">
     <div class="archive-toolbar">
-      <a class="photo-album-tag"></a>
+      <a class="archive-control gallery-preview-download" download aria-label="Download photo" title="Download photo"></a>
       <form method="dialog"><button class="archive-control gallery-preview-close" type="submit" aria-label="Close preview" autofocus></button></form>
     </div>
     <div class="archive-stage" tabindex="0" aria-label="Photo preview. Scroll to pan when zoomed.">
@@ -67,9 +67,9 @@
         <span class="archive-zoom-value">100%</span>
       </label>
       <div class="archive-toolbar gallery-preview-navigation">
-        <button class="archive-control archive-previous" type="button">Previous</button>
+        <button class="archive-control archive-previous" type="button" aria-label="Previous photo"></button>
         <div class="gallery-preview-thumbnails" role="group" aria-label="Photo thumbnails"></div>
-        <button class="archive-control archive-next" type="button">Next</button>
+        <button class="archive-control archive-next" type="button" aria-label="Next photo"></button>
       </div>
     </div>
   </dialog>
