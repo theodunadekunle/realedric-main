@@ -11,7 +11,7 @@ a:hover { text-decoration: underline; }
 :focus-visible { outline: 3px solid #b96d00; outline-offset: 3px; }
 img { display: block; }
 main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
-.site-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; position: absolute; z-index: 1; inset: 0 0 auto; min-height: 72px; padding: 12px var(--gutter); color: #fff; background: #0009; }
+.site-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; position: absolute; z-index: 1; inset: 0 0 auto; min-height: 72px; padding: 12px var(--gutter); color: #fff; background: #000; }
 .brand { display: inline-flex; align-items: center; min-width: 0; min-height: 44px; }
 .brand img { width: clamp(96px, 16vw, 118px); max-width: 100%; height: auto; }
 .nav-toggle { display: none; }

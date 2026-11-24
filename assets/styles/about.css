@@ -1,5 +1,4 @@
-.about-page { background: #fff; }
-.about-page .site-header { position: relative; background: #000; }
+.about-page .site-header { position: relative; }
 .about-intro-copy { padding: 56px var(--gutter) 40px; }
 .about-intro-copy h1 { margin-bottom: 24px; font-size: 24px; font-weight: 500; }
 .about-intro-copy p, .about-split p { color: var(--muted); }
