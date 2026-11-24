@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Realedric photography. Portraits, weddings, events, and creative photography by Edric.">
+  <title>Realedric Photography</title>
+  <link rel="stylesheet" href="assets/styles/home.css">
+  <script src="assets/scripts/home.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="Realedric home"><img src="assets/images/LogoNew.svg" alt="Realedric"></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+    <nav id="main-navigation" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <details class="portfolio-menu"><summary>Portfolio <span class="chevron" aria-hidden="true"></span></summary>
+        <a href="#portfolio">Selected work</a>
+        <a href="#gallery">Photo gallery</a>
+      </details>
+      <a href="#gallery">Archive</a>
+      <a class="pill" href="#contact">Contact Us <span class="up small" aria-hidden="true"></span></a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="home">
+      <h1>Every frame <em>tells</em> a Story.</h1>
+    </section>
+    <section class="work" id="portfolio" aria-labelledby="work-title">
+      <div class="intro">
+        <h2 class="eyebrow" id="work-title">Stories Through My Lens</h2>
+        <p>A curated collection of portraits, weddings, events, and creative photography, capturing the beauty of people, places, and the moments in between.</p>
+      </div>
+      <div class="gallery" id="gallery">
+      <div class="photo-row row-1">
+        <button class="photo Frame14" type="button" aria-label="Enlarge photo: A couple dancing at their wedding"><img src="assets/images/Frame14.png" alt="A couple dancing at their wedding" loading="lazy"></button>
+        <button class="photo Frame17" type="button" aria-label="Enlarge photo: Studio portrait of a woman in white"><img src="assets/images/Frame17.png" alt="Studio portrait of a woman in white" loading="lazy"></button>
+      </div>
+      <div class="photo-row row-2">
+        <button class="photo Frame51" type="button" aria-label="Enlarge photo: Portrait against a warm orange backdrop"><img src="assets/images/Frame51.png" alt="Portrait against a warm orange backdrop" loading="lazy"></button>
+        <button class="photo Frame50" type="button" aria-label="Enlarge photo: Woman in a gold headwrap and sunglasses"><img src="assets/images/Frame50.png" alt="Woman in a gold headwrap and sunglasses" loading="lazy"></button>
+        <button class="photo Frame52" type="button" aria-label="Enlarge photo: Outdoor portrait with a mirror"><img src="assets/images/Frame52.png" alt="Outdoor portrait with a mirror" loading="lazy"></button>
+      </div>
+      <div class="photo-row row-3">
+        <button class="photo Frame18" type="button" aria-label="Enlarge photo: Man giving two thumbs up"><img src="assets/images/Frame18.png" alt="Man giving two thumbs up" loading="lazy"></button>
+        <button class="photo Frame15" type="button" aria-label="Enlarge photo: Singer performing with a microphone"><img src="assets/images/Frame15.png" alt="Singer performing with a microphone" loading="lazy"></button>
+      </div>
+      </div>
+      <button class="pill work-button" type="button" id="view-work">See More Works <span class="up" aria-hidden="true"></span></button>
+    </section>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-copy">
+        <h2 class="eyebrow" id="about-title">Behind the lens</h2>
+        <p>Hi, I'm Edric, a photographer with a passion for capturing people, emotions, and the stories that make every moment unique.</p>
+        <p>I believe the best <em>photographs</em> aren't just seen. <em>They're felt.</em></p>
+        <p>Whether I'm documenting a celebration, creating expressive portraits, or exploring new creative ideas, my approach remains the same: <em>to capture something genuine, meaningful, and timeless.</em></p>
+      </div>
+      <img class="about-photo" src="assets/images/Frame16.png" alt="Edric photographing his reflection" loading="lazy">
+    </section>
+    <section class="testimonials" aria-labelledby="client-title">
+      <h2 id="client-title">Clients who trusted Us</h2>
+      <!-- Figma sample content. Replace with approved client testimonials before publishing. -->
+      <div class="cards" tabindex="0" aria-label="Client testimonials">
+        <article class="card">
+          <blockquote>You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.</blockquote>
+          <div class="client"><span class="avatar"><img src="assets/images/Frame35.png" alt="" loading="lazy"></span><div><h3>Ahmed Saimoon</h3><p>CEO, Avito</p><span class="stars" role="img" aria-label="5 out of 5 stars"></span></div></div>
+        </article>
+        <article class="card">
+          <blockquote>You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.</blockquote>
+          <div class="client"><span class="avatar"><img src="assets/images/Frame35.png" alt="" loading="lazy"></span><div><h3>Ahmed Saimoon</h3><p>CEO, Avito</p><span class="stars" role="img" aria-label="5 out of 5 stars"></span></div></div>
+        </article>
+        <article class="card">
+          <blockquote>You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.</blockquote>
+          <div class="client"><span class="avatar"><img src="assets/images/Frame35.png" alt="" loading="lazy"></span><div><h3>Ahmed Saimoon</h3><p>CEO, Avito</p><span class="stars" role="img" aria-label="5 out of 5 stars"></span></div></div>
+        </article>
+      </div>
+      <div class="carousel-controls">
+        <button type="button" class="circle previous" aria-label="Previous testimonial"></button>
+        <span class="indicators" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <button type="button" class="circle next" aria-label="Next testimonial"></button>
+      </div>
+    </section>
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="faq-intro"><h2 id="faq-title">Frequently Asked Questions</h2><p>You can return any item within 30 days of purchase as long as it’s in its original condition with tags still attached. Simply contact our customer service team, and they will guide you through the process. Please note that certain items, such as swimwear and final sale items, are non-returnable.</p></div>
+      <div class="faq-list">
+        <details open><summary>How do I book a photography session with Realedric?<span class="toggle" aria-hidden="true"></span></summary><p>Booking is simple! Reach out with your preferred date, shoot type, and creative ideas. For regular photography sessions, a 75% non-refundable booking fee is required to secure your date, with the balance due on or before your shoot. Wedding bookings follow a separate payment plan.</p></details>
+        <details><summary>How long does it take to receive my photographs?<span class="toggle" aria-hidden="true"></span></summary><p>For regular photography sessions, your professionally edited images will be delivered through an online gallery within 3–7 working days. Wedding photography takes 3–4 weeks for complete delivery, while selected portraits and soft copies are available within 7–14 working days. Express delivery is also available for regular sessions at an additional fee.</p></details>
+        <details><summary>Can I reschedule or cancel my photography session?<span class="toggle" aria-hidden="true"></span></summary><p>Yes, plans can change! Regular sessions can be rescheduled at least 72 hours before your appointment. Rescheduling within 72 hours or cancelling your session will result in forfeiture of your booking fee. Wedding dates can be rescheduled once, subject to availability. Wedding cancellations are non-refundable.</p></details>
+        <details><summary>Do you offer outdoor and destination photography?<span class="toggle" aria-hidden="true"></span></summary><p>Absolutely! Realedric offers studio, outdoor, and destination photography. For outdoor sessions, location fees or permits are covered by the client. Destination weddings and shoots outside our base location may attract additional travel, accommodation, and logistics costs, which will be discussed before booking.</p></details>
+        <details><summary>Do I need to prepare anything before my photoshoot?<span class="toggle" aria-hidden="true"></span></summary><p>A little preparation makes all the difference! Before your session, we'll discuss your outfit choices, preferred colours, shoot purpose, and creative direction. We'll also prepare a personalised mood board to guide the session. Please arrive with your hair and makeup ready unless styling services have been arranged in advance.</p></details>
+        <details><summary>Can I request additional edited photos or extra shooting time?<span class="toggle" aria-hidden="true"></span></summary><p>Of course! Additional edited images and extended shooting time can be arranged at an extra cost. Extra shooting time for regular sessions is ₦10,000 per 30 minutes, subject to availability. Express delivery and additional edits are also available. For weddings, an additional day of coverage costs ₦150,000.</p></details>
+        <details><summary>Will I receive the raw photos, and can I use my images commercially?<span class="toggle" aria-hidden="true"></span></summary><p>Your package includes professionally edited photographs. Raw or unprocessed files are not provided unless agreed upon in advance for an additional fee. Realedric retains copyright to all photographs, while clients may use their delivered images for personal purposes. Commercial usage requires a separate licensing agreement.</p></details>
+        <details><summary>Are studio fees included in my photography package?<span class="toggle" aria-hidden="true"></span></summary><p>Yes! For studio photography sessions, Realedric handles the studio booking, and the cost is included in your selected package unless otherwise agreed. Any additional requests, such as special backdrops, props, or custom setups, may attract extra charges, which will be communicated before your session.</p></details>
+      </div>
+    </section>
+  </main>
+  <footer id="contact">
+    <div class="footer-layout">
+      <div class="footer-brand"><a href="#home"><img src="assets/images/Frame70.svg" alt="Realedric"></a><p>A professional portrait, events and wedding photographer capturing life's precious moments with elegance and creativity.</p></div>
+      <div class="footer-links">
+        <div><h2>Explore</h2><a href="#about">About</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div>
+        <div><h2>Contact</h2><a href="tel:+2348130868958">+234 (0) 813 086 8958</a><a href="mailto:realedric@gmail.com">realedric@gmail.com</a><span>Available Worldwide ✈️</span></div>
+        <div><h2>Legal</h2><span>Privacy Policy</span><span>Term of Use</span><span>Refund Policy</span></div>
+      </div>
+    </div>
+    <p class="copyright">All content Copyright © 2026 Realedric</p>
+  </footer>
+  <dialog id="lightbox" aria-label="Photo gallery">
+    <form method="dialog"><button class="circle close" aria-label="Close gallery">×</button></form>
+    <button class="circle previous" type="button" aria-label="Previous photo"></button>
+    <img id="active-photo" alt="">
+    <button class="circle next" type="button" aria-label="Next photo"></button>
+  </dialog>
+</body>
+</html>
+
