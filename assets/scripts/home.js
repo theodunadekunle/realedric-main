@@ -105,3 +105,14 @@ if (document.querySelector(".testimonials")) {
   window.addEventListener("resize", updateTestimonials);
   updateTestimonials();
 }
+
+// Vercel serves this script on deployed pages.
+if (location.protocol === "https:" && !["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) {
+  window.va = window.va || function () {
+    (window.vaq = window.vaq || []).push(arguments);
+  };
+  const analyticsScript = document.createElement("script");
+  analyticsScript.src = "/_vercel/insights/script.js";
+  analyticsScript.async = true;
+  document.head.append(analyticsScript);
+}
