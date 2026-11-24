@@ -181,9 +181,11 @@ details[open] .toggle::before { content: "−"; }
   :root { --gutter: 16px; }
   .site-header { align-items: center; }
   .nav-toggle {
-    display: block;
-    min-height: 44px;
-    padding-inline: 16px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     border-radius: 24px;
     background: var(--gold);
     color: #000;
@@ -192,7 +194,7 @@ details[open] .toggle::before { content: "−"; }
     display: none;
     position: absolute;
     inset: 100% 0 auto;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     align-items: start;
     gap: 4px;
     max-height: calc(100svh - 72px);
@@ -202,9 +204,9 @@ details[open] .toggle::before { content: "−"; }
   }
   .nav-toggle[aria-expanded="true"] + #main-navigation { display: grid; }
   .nav-button { width: 100%; padding-inline: 4px; font-size: clamp(14px, 4vw, 16px); }
-  .portfolio-menu[open] { padding-bottom: 132px; }
-  .portfolio-links { inset: 44px auto auto 50%; transform: translateX(-50%); background: #252525; }
-  .nav-contact { grid-column: 1 / -1; justify-self: center; margin: 8px 0 0; }
+  .portfolio-menu[open] .portfolio-links { display: grid; grid-template-columns: 1fr; }
+  .portfolio-links { position: relative; inset: auto auto auto 50%; width: max-content; transform: translateX(-50%); background: #252525; }
+  .nav-contact { justify-self: center; margin: 8px 0 0; }
   .about, .faq { grid-template-columns: minmax(0, 1fr); }
   .about-copy { padding-bottom: 16px; }
   .faq { gap: 16px; }

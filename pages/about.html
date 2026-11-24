@@ -7,12 +7,14 @@
   <title>About Edric | Realedric Photography</title>
   <link rel="stylesheet" href="../assets/styles/home.css">
   <link rel="stylesheet" href="../assets/styles/about.css">
-  <script src="../assets/scripts/home.js" defer></script>
+  <script src="../assets/scripts/home.js?v=2" defer></script>
 </head>
 <body class="about-page">
   <header class="site-header">
     <a href="../index.html#home" class="brand" aria-label="Realedric home"><img src="../assets/images/realedric-logo.svg" alt=""></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
     <nav id="main-navigation" aria-label="Main navigation">
       <a class="nav-button" href="about.html" aria-current="page">About</a>
       <details class="portfolio-menu"><summary class="nav-button">Portfolio <span class="chevron" aria-hidden="true"></span></summary>
@@ -80,7 +82,7 @@
       </div>
       <div class="carousel-controls">
         <button type="button" class="circle previous" aria-label="Previous testimonial"></button>
-        <span class="indicators" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="indicators" aria-hidden="true"></span>
         <button type="button" class="circle next" aria-label="Next testimonial"></button>
       </div>
     </section>

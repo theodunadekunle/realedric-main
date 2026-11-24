@@ -6,13 +6,15 @@
   <meta name="description" content="Realedric photography. Portraits, weddings, events, and creative photography by Edric.">
   <title>Realedric Photography</title>
   <link rel="stylesheet" href="assets/styles/home.css">
-  <script src="assets/scripts/home.js" defer></script>
+  <script src="assets/scripts/home.js?v=2" defer></script>
   <script src="assets/scripts/hero.js?v=2" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a href="#home" class="brand" aria-label="Realedric home"><img src="assets/images/realedric-logo.svg" alt=""></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-navigation">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" focusable="false"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
     <nav id="main-navigation" aria-label="Main navigation">
       <a class="nav-button" href="pages/about.html">About</a>
       <details class="portfolio-menu"><summary class="nav-button">Portfolio <span class="chevron" aria-hidden="true"></span></summary>
@@ -91,21 +93,21 @@
       </div>
       <div class="carousel-controls">
         <button type="button" class="circle previous" aria-label="Previous testimonial"></button>
-        <span class="indicators" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="indicators" aria-hidden="true"></span>
         <button type="button" class="circle next" aria-label="Next testimonial"></button>
       </div>
     </section>
     <section class="faq" aria-labelledby="faq-title">
       <div class="faq-intro"><h2 id="faq-title">Frequently Asked Questions</h2><p>Find out how to book, what to expect at your session, and when you’ll receive your photos.</p></div>
       <div class="faq-list">
-        <details open><summary>How do I book a photography session with Realedric?<span class="toggle" aria-hidden="true"></span></summary><p>Booking is simple! Reach out with your preferred date, shoot type, and creative ideas. For regular photography sessions, a 75% non-refundable booking fee is required to secure your date, with the balance due on or before your shoot. Wedding bookings follow a separate payment plan.</p></details>
-        <details><summary>How long does it take to receive my photographs?<span class="toggle" aria-hidden="true"></span></summary><p>For regular photography sessions, your professionally edited images will be delivered through an online gallery within 3–7 working days. Wedding photography takes 3–4 weeks for complete delivery, while selected portraits and soft copies are available within 7–14 working days. Express delivery is also available for regular sessions at an additional fee.</p></details>
-        <details><summary>Can I reschedule or cancel my photography session?<span class="toggle" aria-hidden="true"></span></summary><p>Yes, plans can change! Regular sessions can be rescheduled at least 72 hours before your appointment. Rescheduling within 72 hours or cancelling your session will result in forfeiture of your booking fee. Wedding dates can be rescheduled once, subject to availability. Wedding cancellations are non-refundable.</p></details>
-        <details><summary>Do you offer outdoor and destination photography?<span class="toggle" aria-hidden="true"></span></summary><p>Absolutely! Realedric offers studio, outdoor, and destination photography. For outdoor sessions, location fees or permits are covered by the client. Destination weddings and shoots outside our base location may attract additional travel, accommodation, and logistics costs, which will be discussed before booking.</p></details>
-        <details><summary>Do I need to prepare anything before my photoshoot?<span class="toggle" aria-hidden="true"></span></summary><p>A little preparation makes all the difference! Before your session, we'll discuss your outfit choices, preferred colours, shoot purpose, and creative direction. We'll also prepare a personalised mood board to guide the session. Please arrive with your hair and makeup ready unless styling services have been arranged in advance.</p></details>
-        <details><summary>Can I request additional edited photos or extra shooting time?<span class="toggle" aria-hidden="true"></span></summary><p>Of course! Additional edited images and extended shooting time can be arranged at an extra cost. Extra shooting time for regular sessions is ₦10,000 per 30 minutes, subject to availability. Express delivery and additional edits are also available. For weddings, an additional day of coverage costs ₦150,000.</p></details>
-        <details><summary>Will I receive the raw photos, and can I use my images commercially?<span class="toggle" aria-hidden="true"></span></summary><p>Your package includes professionally edited photographs. Raw or unprocessed files are not provided unless agreed upon in advance for an additional fee. Realedric retains copyright to all photographs, while clients may use their delivered images for personal purposes. Commercial usage requires a separate licensing agreement.</p></details>
-        <details><summary>Are studio fees included in my photography package?<span class="toggle" aria-hidden="true"></span></summary><p>Yes! For studio photography sessions, Realedric handles the studio booking, and the cost is included in your selected package unless otherwise agreed. Any additional requests, such as special backdrops, props, or custom setups, may attract extra charges, which will be communicated before your session.</p></details>
+        <details name="photography-faq" open><summary>How do I book a photography session with Realedric?<span class="toggle" aria-hidden="true"></span></summary><p>Booking is simple! Reach out with your preferred date, shoot type, and creative ideas. For regular photography sessions, a 75% non-refundable booking fee is required to secure your date, with the balance due on or before your shoot. Wedding bookings follow a separate payment plan.</p></details>
+        <details name="photography-faq"><summary>How long does it take to receive my photographs?<span class="toggle" aria-hidden="true"></span></summary><p>For regular photography sessions, your professionally edited images will be delivered through an online gallery within 3–7 working days. Wedding photography takes 3–4 weeks for complete delivery, while selected portraits and soft copies are available within 7–14 working days. Express delivery is also available for regular sessions at an additional fee.</p></details>
+        <details name="photography-faq"><summary>Can I reschedule or cancel my photography session?<span class="toggle" aria-hidden="true"></span></summary><p>Yes, plans can change! Regular sessions can be rescheduled at least 72 hours before your appointment. Rescheduling within 72 hours or cancelling your session will result in forfeiture of your booking fee. Wedding dates can be rescheduled once, subject to availability. Wedding cancellations are non-refundable.</p></details>
+        <details name="photography-faq"><summary>Do you offer outdoor and destination photography?<span class="toggle" aria-hidden="true"></span></summary><p>Absolutely! Realedric offers studio, outdoor, and destination photography. For outdoor sessions, location fees or permits are covered by the client. Destination weddings and shoots outside our base location may attract additional travel, accommodation, and logistics costs, which will be discussed before booking.</p></details>
+        <details name="photography-faq"><summary>Do I need to prepare anything before my photoshoot?<span class="toggle" aria-hidden="true"></span></summary><p>A little preparation makes all the difference! Before your session, we'll discuss your outfit choices, preferred colours, shoot purpose, and creative direction. We'll also prepare a personalised mood board to guide the session. Please arrive with your hair and makeup ready unless styling services have been arranged in advance.</p></details>
+        <details name="photography-faq"><summary>Can I request additional edited photos or extra shooting time?<span class="toggle" aria-hidden="true"></span></summary><p>Of course! Additional edited images and extended shooting time can be arranged at an extra cost. Extra shooting time for regular sessions is ₦10,000 per 30 minutes, subject to availability. Express delivery and additional edits are also available. For weddings, an additional day of coverage costs ₦150,000.</p></details>
+        <details name="photography-faq"><summary>Will I receive the raw photos, and can I use my images commercially?<span class="toggle" aria-hidden="true"></span></summary><p>Your package includes professionally edited photographs. Raw or unprocessed files are not provided unless agreed upon in advance for an additional fee. Realedric retains copyright to all photographs, while clients may use their delivered images for personal purposes. Commercial usage requires a separate licensing agreement.</p></details>
+        <details name="photography-faq"><summary>Are studio fees included in my photography package?<span class="toggle" aria-hidden="true"></span></summary><p>Yes! For studio photography sessions, Realedric handles the studio booking, and the cost is included in your selected package unless otherwise agreed. Any additional requests, such as special backdrops, props, or custom setups, may attract extra charges, which will be communicated before your session.</p></details>
       </div>
     </section>
   </main>
