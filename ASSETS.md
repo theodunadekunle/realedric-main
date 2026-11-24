@@ -63,8 +63,8 @@ Home and Portfolio share these files. Use one export per filename.
 
 ## Webfonts
 
-- [ ] `assets/fonts/Inter.woff2` · Inter variable webfont
-- [ ] `assets/fonts/InstrumentSerif-Italic.woff2` · Instrument Serif Italic webfont
+- [x] `assets/fonts/Inter.woff2` · Inter variable webfont
+- [x] `assets/fonts/InstrumentSerif-Italic.woff2` · Instrument Serif Italic webfont
 
 The header uses the clickable Realedric text. The footer uses the SVG wordmarks listed above.
 
