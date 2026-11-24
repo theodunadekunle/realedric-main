@@ -41,35 +41,37 @@ header.addEventListener("keydown", event => {
 });
 compactNav.addEventListener("change", () => setNavigation(false));
 
-const gallery = document.querySelector("#lightbox");
-const photos = [...document.querySelectorAll(".photo img")];
-const activePhoto = document.querySelector("#active-photo");
-let photoIndex = 0;
+if (document.querySelector("#lightbox")) {
+  const gallery = document.querySelector("#lightbox");
+  const photos = [...document.querySelectorAll(".photo img")];
+  const activePhoto = document.querySelector("#active-photo");
+  let photoIndex = 0;
 
-function showPhoto(index) {
-  photoIndex = (index + photos.length) % photos.length;
-  activePhoto.src = photos[photoIndex].src;
-  activePhoto.alt = photos[photoIndex].alt;
+  function showPhoto(index) {
+    photoIndex = (index + photos.length) % photos.length;
+    activePhoto.src = photos[photoIndex].src;
+    activePhoto.alt = photos[photoIndex].alt;
+  }
+
+  function openGallery(index) {
+    showPhoto(index);
+    gallery.showModal();
+  }
+
+  photos.forEach((photo, index) => {
+    photo.closest("button").addEventListener("click", () => openGallery(index));
+  });
+  document.querySelector("#view-work").addEventListener("click", () => openGallery(0));
+  gallery.querySelector(".previous").addEventListener("click", () => showPhoto(photoIndex - 1));
+  gallery.querySelector(".next").addEventListener("click", () => showPhoto(photoIndex + 1));
+  gallery.addEventListener("keydown", event => {
+    if (event.key === "ArrowLeft") showPhoto(photoIndex - 1);
+    if (event.key === "ArrowRight") showPhoto(photoIndex + 1);
+  });
+  gallery.addEventListener("click", event => {
+    if (event.target === gallery) gallery.close();
+  });
 }
-
-function openGallery(index) {
-  showPhoto(index);
-  gallery.showModal();
-}
-
-photos.forEach((photo, index) => {
-  photo.closest("button").addEventListener("click", () => openGallery(index));
-});
-document.querySelector("#view-work").addEventListener("click", () => openGallery(0));
-gallery.querySelector(".previous").addEventListener("click", () => showPhoto(photoIndex - 1));
-gallery.querySelector(".next").addEventListener("click", () => showPhoto(photoIndex + 1));
-gallery.addEventListener("keydown", event => {
-  if (event.key === "ArrowLeft") showPhoto(photoIndex - 1);
-  if (event.key === "ArrowRight") showPhoto(photoIndex + 1);
-});
-gallery.addEventListener("click", event => {
-  if (event.target === gallery) gallery.close();
-});
 
 const cards = document.querySelector(".cards");
 const controls = document.querySelector(".carousel-controls");
@@ -92,9 +94,10 @@ cards.addEventListener("scroll", updateTestimonials);
 window.addEventListener("resize", updateTestimonials);
 updateTestimonials();
 
+const imageDirectory = new URL("../images/" + (document.body.dataset.imageDirectory || ""), document.currentScript.src);
 for (const [selector, filename] of [[".previous", "ArrowLeft.svg"], [".next", "ArrowRight.svg"], [".toggle", "Plus.svg"]]) {
   const icon = new Image();
   icon.onload = () => document.querySelectorAll(selector).forEach(element => element.classList.add("has-asset"));
-  icon.src = "assets/images/" + filename;
+  icon.src = new URL(filename, imageDirectory).href;
 }
 
