@@ -12,7 +12,7 @@ a:hover { text-decoration: underline; }
 img { display: block; }
 main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
 .site-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; position: absolute; z-index: 1; inset: 0 0 auto; min-height: 72px; padding: 12px var(--gutter); color: #fff; background: #0009; }
-.brand img { width: 118px; height: 35px; }
+.brand { display: inline-flex; align-items: center; min-height: 44px; font-size: 22px; font-weight: 600; }
 .nav-toggle { display: none; }
 nav { display: flex; align-items: center; gap: 10px; }
 nav > a, .portfolio-menu > summary { padding: 12px; }
