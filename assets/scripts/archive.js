@@ -25,7 +25,13 @@ if (archiveViewer) {
     archiveImage.alt = photo.alt;
     archiveImage.src = photo.src;
     if (archiveCount) archiveCount.textContent = `${archiveIndex + 1} / ${archivePhotos.length}`;
-    downloadLink.href = photo.src;
+    const downloadUrl = photo.dataset.download;
+    downloadLink.href = downloadUrl || photo.src;
+    if (downloadUrl) {
+      const url = new URL(downloadUrl);
+      url.searchParams.set("dl", url.pathname.split("/").pop());
+      downloadLink.href = url.href;
+    }
     if (thumbnails) {
       thumbnails.querySelector("[aria-current]")?.removeAttribute("aria-current");
       const current = thumbnails.children[archiveIndex];

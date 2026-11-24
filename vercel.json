@@ -76,5 +76,7 @@
       "source": "/events",
       "destination": "/pages/events"
     }
-  ]
+  ],
+  "buildCommand": "node scripts/build-site.js",
+  "outputDirectory": "dist"
 }
