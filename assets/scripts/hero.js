@@ -1,4 +1,4 @@
-const hero = document.querySelector(".hero");
+const hero = document.querySelector(".hero, .contact-slideshow");
 const slideImages = [...hero.querySelectorAll(".hero-slide img")];
 const pauseButton = hero.querySelector(".hero-pause");
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
