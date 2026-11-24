@@ -54,8 +54,18 @@ summary::-webkit-details-marker { display: none; }
 .hero-pause:not([hidden]) { display: grid; place-items: center; }
 .hero-pause { flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%; background: #000c; color: #fff; }
 .hero-pause:hover { background: #000; }
-.hero-pause::before { content: ""; width: 12px; height: 15px; border-inline: 3px solid currentColor; }
-.hero-pause[data-paused]::before { width: 0; height: 0; border: 0; border-block: 8px solid transparent; border-left: 12px solid currentColor; margin-left: 3px; }
+/* Iconify Material Design Icons, mdi:pause and mdi:play. */
+.hero-pause::before {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14 19h4V5h-4M6 19h4V5H6z'/%3E%3C/svg%3E");
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: currentColor;
+  mask: var(--icon) center / contain no-repeat;
+}
+.hero-pause[data-paused]::before {
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5.14v14l11-7z'/%3E%3C/svg%3E");
+}
 @media (prefers-reduced-motion: reduce) {
   .hero-slide.is-current { transition: none; }
 }
@@ -78,6 +88,7 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .Frame18 { --w: 120.29%; --h: 127%; --x: -9.97%; --y: -17.03%; }
 .Frame15 { --h: 149.37%; --y: -4.98%; }
 .work-button { justify-self: center; padding: 16px; }
+.work-button:hover { text-decoration: none; }
 :is(.work-button, .nav-contact, .contact-submit):is(:hover, :focus-visible) { background: #ffd46b; }
 @media (prefers-reduced-motion: no-preference) {
   .work-button, .nav-contact, .contact-submit { transition: background-color 180ms ease; }
@@ -226,6 +237,17 @@ details[open] .toggle::before { content: "−"; }
   .nav-contact { justify-self: center; margin: 8px 0 0; }
   .about, .faq { grid-template-columns: minmax(0, 1fr); }
   .about-copy { padding-bottom: 16px; }
+  .about-photo {
+    width: calc(100% + 2 * var(--gutter));
+    height: auto;
+    margin-inline: calc(-1 * var(--gutter));
+    aspect-ratio: 4 / 3;
+  }
+  .hero-slide-6 img {
+    top: 72px;
+    height: calc(100% - 72px);
+    object-position: 51% center;
+  }
   .faq { gap: 16px; }
 }
 @media (max-width: 540px) {
@@ -237,7 +259,6 @@ details[open] .toggle::before { content: "−"; }
   .row-1, .row-2, .row-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: auto; }
   .photo { aspect-ratio: 3 / 4; }
   .row-2 .photo:last-child { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
-  .about-photo { height: auto; aspect-ratio: 4 / 3; }
   .card { flex-basis: 100%; }
   .faq-list { gap: 13.8px; padding: 16px; }
   .faq-list summary { min-height: 44px; }

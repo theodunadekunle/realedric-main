@@ -60,7 +60,7 @@ if (document.querySelector("#lightbox")) {
   photos.forEach((photo, index) => {
     photo.closest("button").addEventListener("click", () => openGallery(index));
   });
-  document.querySelector("#view-work").addEventListener("click", () => openGallery(0));
+  document.querySelector("#view-work")?.addEventListener("click", () => openGallery(0));
   gallery.querySelector(".previous").addEventListener("click", () => showPhoto(photoIndex - 1));
   gallery.querySelector(".next").addEventListener("click", () => showPhoto(photoIndex + 1));
   gallery.addEventListener("keydown", event => {
