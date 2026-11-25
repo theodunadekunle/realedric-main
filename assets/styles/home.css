@@ -161,7 +161,8 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .footer-brand { max-width: 370px; }
 .footer-brand a { display: inline-block; }
 .footer-brand img { width: clamp(152px, 26vw, 223px); max-width: 100%; height: auto; }
-.footer-brand p { margin-top: clamp(20px, 2.5vw, 36px); font-size: 14px; line-height: 1.5; }
+.footer-brand p, .copyright { font-size: 14px; }
+.footer-brand p { margin-top: clamp(20px, 2.5vw, 36px); line-height: 1.5; }
 .footer-socials {
   display: flex;
   align-items: center;
