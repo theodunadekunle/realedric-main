@@ -144,6 +144,18 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .faq-list { display: grid; gap: 32px; padding: 20px; border-radius: 12px; background: #fff; }
 .faq-list summary { font-weight: 500; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
 .faq-list details p { margin-top: 4px; }
+@media (prefers-reduced-motion: no-preference) {
+  @supports selector(details::details-content) and (transition-behavior: allow-discrete) {
+    .faq-list details::details-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      opacity: 0;
+      transition: grid-template-rows 320ms ease, opacity 320ms ease, content-visibility 320ms allow-discrete;
+    }
+    .faq-list details[open]::details-content { grid-template-rows: 1fr; opacity: 1; }
+    .faq-answer { min-height: 0; overflow: hidden; }
+  }
+}
 .site-footer {
   display: grid;
   gap: clamp(40px, 6.53vw, 94px);
@@ -191,6 +203,23 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .footer-links a[href^="mailto:"] { white-space: nowrap; }
 .footer-links a:hover, .footer-links a:focus-visible { color: #fff; }
 .copyright { border-top: 1px solid #c7c7c766; padding-top: 20px; text-align: center; font-weight: 300; }
+.whatsapp-chat {
+  position: fixed;
+  z-index: 5;
+  right: max(var(--gutter), env(safe-area-inset-right));
+  bottom: max(var(--gutter), env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 52px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #087c52;
+  color: #fff;
+  box-shadow: 0 3px 14px rgb(0 0 0 / 24%);
+}
+.whatsapp-chat:hover { background: #065f40; }
+.whatsapp-chat:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.whatsapp-chat img { width: 28px; height: 28px; }
 
 
 

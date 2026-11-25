@@ -85,6 +85,37 @@ if (document.querySelector(".testimonials")) {
   updateTestimonials();
 }
 
+const revealMotion = matchMedia("(prefers-reduced-motion: reduce)");
+if (!revealMotion.matches && "IntersectionObserver" in window && "animate" in Element.prototype) {
+  const reveals = document.querySelectorAll([
+    "h1, h2, h3, p:not(.faq-answer p), blockquote, summary, label, figcaption",
+    ".nav-button, .pill, .footer-links a, .footer-links li:not(:has(a)), .footer-socials a",
+    "img:not(.hero-slide img), video, .hero-slides",
+  ].join(", "));
+  const running = new Set();
+  const observer = new IntersectionObserver(entries => {
+    let stagger = 0;
+    for (const { target, isIntersecting } of entries) {
+      if (!isIntersecting) continue;
+      observer.unobserve(target);
+      if (revealMotion.matches || target.matches(":focus-within")) continue;
+      const isMedia = target.matches("img, video, .hero-slides");
+      const animation = target.animate(
+        [{ opacity: 0, translate: isMedia ? "none" : "0 10px" }, {}],
+        { duration: isMedia ? 720 : 560, delay: Math.min(stagger++ * 36, 180),
+          easing: "cubic-bezier(.22, 1, .36, 1)", fill: "backwards" },
+      );
+      running.add(animation);
+      animation.finished.then(() => running.delete(animation), () => running.delete(animation));
+      target.addEventListener("focusin", () => animation.finish(), { once: true });
+    }
+  });
+  reveals.forEach(element => observer.observe(element));
+  revealMotion.addEventListener("change", ({ matches }) => {
+    if (matches) running.forEach(animation => animation.cancel());
+  });
+}
+
 // Vercel serves this script on deployed pages.
 if (location.protocol === "https:" && !["localhost", "127.0.0.1", "[::1]"].includes(location.hostname)) {
   window.va = window.va || function () {
