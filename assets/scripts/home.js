@@ -1,4 +1,17 @@
 const menu = document.querySelector(".portfolio-menu");
+const showcase = document.querySelector("#showcase-photos");
+if (showcase?.content.childElementCount) {
+  const photos = Array.from(showcase.content.children);
+  const slots = document.querySelectorAll("#gallery a.photo");
+  slots.forEach((slot, index) => {
+    const pick = index + Math.floor(Math.random() * (photos.length - index));
+    [photos[index], photos[pick]] = [photos[pick], photos[index]];
+    const photo = photos[index].cloneNode(true);
+    photo.className = slot.className;
+    slot.replaceWith(photo);
+  });
+}
+
 document.addEventListener("click", event => {
   if (!menu.contains(event.target)) menu.open = false;
 });
