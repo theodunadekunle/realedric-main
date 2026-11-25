@@ -23,24 +23,18 @@ main { display: grid; grid-template-columns: minmax(0, 1fr); gap: 40px; }
 .nav-toggle { display: none; }
 nav { display: flex; align-items: center; gap: 10px; }
 
-.portfolio-menu { position: relative; }
 summary { list-style: none; cursor: pointer; }
 summary::-webkit-details-marker { display: none; }
 .nav-button, .pill { display: inline-flex; align-items: center; justify-content: center; gap: 4px; }
 .nav-button, .nav-contact { min-height: 44px; padding: 12px; border-radius: 40px; }
 .nav-button { color: #c7c7c7; white-space: nowrap; }
-.nav-button:hover, .nav-button:focus-visible, .nav-button[aria-current="page"], .portfolio-menu[open] > .nav-button { color: #fff; text-decoration: none; }
+.nav-button:hover, .nav-button:focus-visible, .nav-button[aria-current="page"] { color: #fff; text-decoration: none; }
 .nav-contact:is(:hover, :focus-visible) { text-decoration: none; }
-.portfolio-links { position: absolute; inset: 100% auto auto 0; min-width: 144px; padding: 6px; border-radius: 8px; background: #191919; }
-.portfolio-links a { display: flex; align-items: center; min-height: 44px; padding: 8px 10px; border-radius: 8px; }
-.portfolio-links a + a { margin-block-start: 4px; }
-.portfolio-links a:hover, .portfolio-links a:focus-visible { background: #333; text-decoration: none; }
-.portfolio-links a:focus-visible { outline-color: var(--gold); outline-offset: -3px; }
 
-.nav-button, .portfolio-links a, .pill { font-size: 16px; font-weight: 500; }
+.nav-button, .pill { font-size: 16px; font-weight: 500; }
 .pill { background: var(--gold); color: #000; border-radius: 40px; white-space: nowrap; }
 .nav-contact { margin-left: 18px; line-height: 20px; }
-.nav-contact-icon, .up, .chevron, .toggle, .nav-icon-menu, .nav-icon-close {
+.nav-contact-icon, .up, .toggle, .nav-icon-menu, .nav-icon-close {
   display: grid;
   place-items: center;
   flex: none;
@@ -84,6 +78,7 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
   border-radius: 24px;
   background: rgb(0 0 0 / 50%);
   color: #fff;
+  font-size: 12px;
   font-weight: 400;
 }
 @media (hover: hover) {
@@ -134,7 +129,7 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 .card blockquote, .card p, .faq p { font-size: 14px; font-weight: 300; color: var(--muted); }
 .card blockquote { text-align: justify; }
 .client { display: flex; gap: 13px; }
-.client h3 { font-size: 18px; font-weight: 600; }
+.client h3 { font-size: inherit; font-weight: 600; }
 .client p { margin: 4px 0; }
 .avatar { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 50%; background: #eee; font-size: 14px; font-weight: 500; }
 .avatar-photo { display: block; width: 48px; object-fit: cover; }
@@ -194,7 +189,7 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 }
 .footer-links a[href^="mailto:"] { white-space: nowrap; }
 .footer-links a:hover, .footer-links a:focus-visible { color: #fff; }
-.copyright { border-top: 1px solid #c7c7c766; padding-top: 20px; text-align: center; font-weight: 500; }
+.copyright { border-top: 1px solid #c7c7c766; padding-top: 20px; text-align: center; font-weight: 300; }
 
 
 
@@ -254,8 +249,6 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
   .nav-toggle[aria-expanded="true"] .nav-icon-close { display: grid; }
   .nav-toggle[aria-expanded="true"] + #main-navigation { display: grid; }
   .nav-button { width: 100%; padding-inline: 4px; }
-  .portfolio-menu[open] .portfolio-links { display: grid; grid-template-columns: 1fr; }
-  .portfolio-links { position: relative; inset: auto auto auto 50%; width: max-content; transform: translateX(-50%); background: #252525; }
   .nav-contact { justify-self: center; margin: 8px 0 0; }
   .about, .faq { grid-template-columns: minmax(0, 1fr); }
   .about-copy { padding-bottom: 16px; }
@@ -305,7 +298,7 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
   --icon-play-arrow: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%3E%3Cpath%20d%3D%22M8%206.82v10.36c0%20.79.87%201.27%201.54.84l8.14-5.18c.62-.39.62-1.29%200-1.69L9.54%205.98C8.87%205.55%208%206.03%208%206.82z%22%2F%3E%3C%2Fsvg%3E");
 }
 
-:is(.nav-contact-icon, .up, .chevron, .toggle, .nav-icon-menu, .nav-icon-close, .hero-pause, .circle.previous, .circle.next)::before {
+:is(.nav-contact-icon, .up, .toggle, .nav-icon-menu, .nav-icon-close, .hero-pause, .circle.previous, .circle.next)::before {
   content: "";
   width: var(--icon-size, 20px);
   height: var(--icon-size, 20px);
@@ -315,8 +308,6 @@ em { color: var(--gold); font: italic 400 1em "Instrument Serif", Georgia, serif
 
 .nav-contact-icon, .up { --icon: var(--icon-arrow-upward); --icon-size: 16px; }
 :is(.nav-contact-icon, .up)::before { transform: rotate(45deg); }
-.chevron { --icon: var(--icon-expand-more); --icon-size: 18px; }
-.portfolio-menu[open] .chevron::before { transform: rotate(180deg); }
 .toggle { --icon: var(--icon-add); }
 details[open] .toggle { --icon: var(--icon-remove); }
 .nav-icon-menu { --icon: var(--icon-menu); }

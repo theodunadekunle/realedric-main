@@ -1,4 +1,3 @@
-const menu = document.querySelector(".portfolio-menu");
 const showcase = document.querySelector("#showcase-photos");
 if (showcase?.content.childElementCount) {
   for (const group of ["portraits", "events"]) {
@@ -24,17 +23,6 @@ if (showcase?.content.childElementCount) {
   }
 }
 
-document.addEventListener("click", event => {
-  if (!menu.contains(event.target)) menu.open = false;
-});
-menu.addEventListener("keydown", event => {
-  if (event.key === "Escape" && menu.open) {
-    event.preventDefault();
-    menu.open = false;
-    menu.querySelector("summary").focus();
-  }
-});
-
 const header = document.querySelector(".site-header");
 const nav = document.querySelector("#main-navigation");
 const navToggle = document.querySelector(".nav-toggle");
@@ -42,7 +30,6 @@ const compactNav = matchMedia("(max-width: 700px)");
 
 function setNavigation(open) {
   navToggle.setAttribute("aria-expanded", String(open));
-  if (!open) menu.open = false;
 }
 
 navToggle.addEventListener("click", () => {
@@ -51,7 +38,6 @@ navToggle.addEventListener("click", () => {
 nav.addEventListener("click", event => {
   if (!event.target.closest("a")) return;
   if (compactNav.matches) setNavigation(false);
-  else menu.open = false;
 });
 document.addEventListener("click", event => {
   if (!header.contains(event.target)) setNavigation(false);
