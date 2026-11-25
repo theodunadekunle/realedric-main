@@ -31,7 +31,7 @@ async function updateShowcase() {
   if (!grid) throw new Error("Missing portfolio gallery");
 
   const photos = Array.from(grid[2].matchAll(
-    /<button[^>]* data-category="([^"]+)"[^>]*>(<img src="[^"]+"[^>]*>)<\/button>/g,
+    /<button[^>]* data-category="(weddings|portraits)"[^>]*>(<img src="[^"]+"[^>]*>)<\/button>/g,
   ), ([, category, image]) => ({
     category,
     image: image.replace('src="../assets/', 'src="assets/').replace(/ data-download="[^"]*"/, ""),
