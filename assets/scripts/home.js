@@ -1,22 +1,27 @@
 const menu = document.querySelector(".portfolio-menu");
 const showcase = document.querySelector("#showcase-photos");
 if (showcase?.content.childElementCount) {
-  const photos = Array.from(showcase.content.children);
-  const slots = document.querySelectorAll("#gallery a.photo");
-  for (let index = 0; index < photos.length - 1; index++) {
-    const pick = index + Math.floor(Math.random() * (photos.length - index));
-    [photos[index], photos[pick]] = [photos[pick], photos[index]];
+  for (const group of ["portraits", "events"]) {
+    const selector = `a[data-showcase-group="${group}"]`;
+    const photos = Array.from(showcase.content.querySelectorAll(selector));
+    const slots = document.querySelectorAll(`#gallery ${selector}`);
+    for (let index = 0; index < slots.length; index++) {
+      const pick = index + Math.floor(Math.random() * (photos.length - index));
+      [photos[index], photos[pick]] = [photos[pick], photos[index]];
+    }
+    const selection = photos.slice(0, slots.length);
+    if (group === "portraits" && selection.length > 1 && selection.every(photo => photo.href === selection[0].href)) {
+      const alternatives = photos.filter(photo => photo.href !== selection[0].href);
+      if (alternatives.length) {
+        selection[Math.floor(Math.random() * selection.length)] = alternatives[Math.floor(Math.random() * alternatives.length)];
+      }
+    }
+    slots.forEach((slot, index) => {
+      const photo = selection[index].cloneNode(true);
+      photo.className = slot.className;
+      slot.replaceWith(photo);
+    });
   }
-  const selection = photos.slice(0, slots.length);
-  if (selection.length > 1 && selection.every(photo => photo.href === selection[0].href)) {
-    const alternate = photos.find(photo => photo.href !== selection[0].href);
-    if (alternate) selection[Math.floor(Math.random() * selection.length)] = alternate;
-  }
-  slots.forEach((slot, index) => {
-    const photo = selection[index].cloneNode(true);
-    photo.className = slot.className;
-    slot.replaceWith(photo);
-  });
 }
 
 document.addEventListener("click", event => {

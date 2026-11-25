@@ -31,7 +31,7 @@ async function updateShowcase() {
   if (!grid) throw new Error("Missing portfolio gallery");
 
   const photos = Array.from(grid[2].matchAll(
-    /<button[^>]* data-category="(weddings|portraits)"[^>]*>(<img src="[^"]+"[^>]*>)<\/button>/g,
+    /<button[^>]* data-category="(weddings|portraits|events)"[^>]*>(<img src="[^"]+"[^>]*>)<\/button>/g,
   ), ([, category, image]) => ({
     category,
     image: image.replace('src="../assets/', 'src="assets/').replace(/ data-download="[^"]*"/, ""),
@@ -39,19 +39,23 @@ async function updateShowcase() {
   const path = join(output, "index.html");
   const html = await readFile(path, "utf8");
   const uniquePhotos = new Map(photos.map(photo => [photo.image.split('"')[1], photo]));
-  const links = Array.from(uniquePhotos.values(), ({ category, image }) => {
+  const links = { portraits: [], events: [] };
+  for (const { category, image } of uniquePhotos.values()) {
     const label = category[0].toUpperCase() + category.slice(1);
     const alt = image.match(/ alt="([^"]*)"/)?.[1];
     const accessibleLabel = `Open ${label} album${alt ? `: ${alt}` : ""}`;
-    return `<a href="pages/${category}.html" aria-label="${accessibleLabel}">${image}<span class="photo-category" aria-hidden="true">${label}</span></a>`;
-  });
+    const group = category === "events" ? "events" : "portraits";
+    links[group].push(`<a data-showcase-group="${group}" href="pages/${category}.html" aria-label="${accessibleLabel}">${image}<span class="photo-category" aria-hidden="true">${label}</span></a>`);
+  }
   const slots = /<a class="(photo [^"]+)" href="pages\/\w+\.html" aria-label="[^"]*"><img[^>]*><span class="photo-category" aria-hidden="true">[^<]+<\/span><\/a>/g;
   let slot = 0;
-  await writeFile(path, html.replace(slots, (_match, classes) => (
-    links[slot++]?.replace("<a ", `<a class="${classes}" `) ?? ""
-  )).replace(/\n +<div class="photo-row [^"]+">\s*<\/div>/g, "")
+  await writeFile(path, html.replace(slots, (_match, classes) => {
+    const index = slot++;
+    const link = index < 4 ? links.portraits[index] : links.events[index - 4];
+    return link?.replace("<a ", `<a class="${classes}" `) ?? "";
+  }).replace(/\n +<div class="photo-row [^"]+">\s*<\/div>/g, "")
     .replace('<template id="showcase-photos"></template>', () => (
-      `<template id="showcase-photos">\n${links.join("\n")}\n</template>`
+      `<template id="showcase-photos">\n${[...links.portraits, ...links.events].join("\n")}\n</template>`
     )));
 }
 
