@@ -65,19 +65,21 @@
   <dialog class="archive-viewer" aria-label="Archive photo viewer">
     <div class="archive-toolbar">
       <a class="archive-control gallery-preview-download" download aria-label="Download photo" title="Download photo"></a>
-      <p class="archive-count"></p>
-      <form method="dialog"><button class="archive-control" autofocus>Close</button></form>
+      <form method="dialog"><button class="archive-control gallery-preview-close" type="submit" aria-label="Close preview" autofocus></button></form>
     </div>
     <div class="archive-stage" tabindex="0" aria-label="Photo preview. Scroll to pan when zoomed.">
       <img alt="">
     </div>
-    <div class="archive-toolbar archive-viewer-bottom">
-      <button class="archive-control archive-previous" type="button" aria-label="Previous photo"></button>
+    <div class="gallery-preview-controls">
       <label class="archive-zoom" for="archive-zoom">
         Zoom <input id="archive-zoom" type="range" min="100" max="300" value="100" step="5">
         <span class="archive-zoom-value">100%</span>
       </label>
-      <button class="archive-control archive-next" type="button" aria-label="Next photo"></button>
+      <div class="archive-toolbar gallery-preview-navigation">
+        <button class="archive-control archive-previous" type="button" aria-label="Previous photo"></button>
+        <div class="gallery-preview-thumbnails" role="group" aria-label="Photo thumbnails"></div>
+        <button class="archive-control archive-next" type="button" aria-label="Next photo"></button>
+      </div>
     </div>
   </dialog>
   <footer class="site-footer" id="contact">
